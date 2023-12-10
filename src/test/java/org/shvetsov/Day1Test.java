@@ -22,7 +22,7 @@ class Day1Test {
     }
     @Test
     public void day1Part1Alex() {
-        assertThat(new Day1().partOneAlex().getAsLong())
+        assertThat(new Day1().partOneAlex().orElse(-1L))
                 .isEqualTo(OptionalLong.empty().orElse(DAY_1_PART_1_CORRECT));
     }
 
@@ -54,12 +54,8 @@ class Day1Test {
     public void test() {
         Map<String, Integer> digitValuesMap = Map.of("one", 1, "two", 2, "three", 3
                 , "four", 4, "five", 5, "six", 6, "seven", 7, "eight", 8, "nine", 9);
-
         Map<String, Integer> reverseDigitValuesMap = digitValuesMap.entrySet().stream()
                 .collect(toMap(e -> new StringBuilder(e.getKey()).reverse().toString(), Map.Entry::getValue));
-
-
-
         System.out.println(digitValuesMap);
         System.out.println(reverseDigitValuesMap);
     }

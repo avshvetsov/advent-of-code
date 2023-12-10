@@ -1,8 +1,8 @@
-package org.shvetsov;
+package org.shvetsov.day1;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
-import org.shvetsov.day1.Day1;
+import org.shvetsov.Utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 //        Benchmarks.day1part2      avgt    3  1,406 ± 0,078  ms/op
 //        Benchmarks.day1part2Dany  avgt    3  1,511 ± 0,194  ms/op
 
-@BenchmarkMode({Mode.AverageTime, Mode.SingleShotTime})
+@BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 5)
 @Measurement(iterations = 3, time = 10)
 @Fork(0)

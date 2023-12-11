@@ -9,6 +9,7 @@ class Day3Test {
 
     private static final String EXAMPLE_PATH = "src/main/resources/example 3-1, 3-2.txt";
     private static final Integer EXAMPLE_DAY_3_PART_1_CORRECT = 4366;
+    private static final Integer EXAMPLE_DAY_3_PART_2_CORRECT = 467835;
 
     private static final Integer DAY_3_PART_1_CORRECT = 507214;
     private static final Integer DAY_3_PART_2_CORRECT = -1;

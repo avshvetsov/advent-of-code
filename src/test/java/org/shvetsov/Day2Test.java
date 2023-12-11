@@ -53,4 +53,13 @@ class Day2Test {
         assertThat(day2.partTwoAnton(Utils.parseInputByNewLine(Day2.INPUT_PATH))).isEqualTo(DAY_2_PART_2_CORRECT);
     }
 
+    @Test
+    public void day2Part1Dany() {
+        assertThat(Day2.part1Dany(Utils.parseInputByNewLine(Day2.INPUT_PATH).toArray(String[]::new))).isEqualTo(DAY_2_PART_1_CORRECT);
+    }
+    @Test
+    public void day2Part2Dany() {
+        assertThat(Day2.part2Dany(Utils.parseInputByNewLine(Day2.INPUT_PATH).toArray(String[]::new))).isEqualTo(DAY_2_PART_2_CORRECT);
+    }
+
 }

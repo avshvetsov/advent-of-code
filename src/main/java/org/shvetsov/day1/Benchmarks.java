@@ -26,7 +26,7 @@ public class Benchmarks {
 
     @Benchmark
     public void day1part1(Blackhole bh) {
-        bh.consume(new Day1().partOneTony(Utils.parseInputByNewLine(INPUT_PATH)));
+        bh.consume(new Day1().partOneAnton(Utils.parseInputByNewLine(INPUT_PATH)));
     }
 
     @Benchmark
@@ -40,7 +40,7 @@ public class Benchmarks {
 
     @Benchmark
     public void day1part2(Blackhole bh) {
-        bh.consume(new Day1().partTwoTony(Utils.parseInputByNewLine(INPUT_PATH)));
+        bh.consume(new Day1().partTwoAnton(Utils.parseInputByNewLine(INPUT_PATH)));
     }
 
     @Benchmark

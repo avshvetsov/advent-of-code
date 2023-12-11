@@ -1,6 +1,9 @@
 package org.shvetsov.day3;
 
+import lombok.Data;
 import org.shvetsov.Utils;
+
+import java.util.*;
 
 import static org.shvetsov.Utils.isIndexExistInArray;
 
@@ -65,8 +68,66 @@ public class Day3 {
 
 
     public int partTwoAnton(char[][] engineSchema) {
-        return 0;
+        int sumGearRatio = 0;
+        for (int i = 0; i < engineSchema.length; i++) {
+            for (int j = 0; j < engineSchema[i].length; j++) {
+                if (engineSchema[i][j] == '*') {
+                    sumGearRatio += findGearRatio(engineSchema, i, j);
+                }
+            }
+        }
+        return sumGearRatio;
+    }
+
+    private int findGearRatio(char[][] engineSchema, int row, int column) {
+        Set<Part> parts = new HashSet<>();
+        for (int i = row - 1; i <= row + 1; i++) {
+            for (int j = column - 1; j <= column + 1; j++) {
+                if (isIndexExistInArray(engineSchema, i, j)) {
+                    if (Character.isDigit(engineSchema[i][j])) {
+                        parts.add(new Part(engineSchema, i, j));
+                    }
+                }
+            }
+        }
+        if (parts.size() > 1) {
+            return parts.stream()
+                    .mapToInt(Part::getValue)
+                    .reduce(1, (left, right) -> left * right);
+        } else return 0;
     }
 
 
+    @Data
+    private class Part {
+        private int value;
+        private int row;
+        private int startColumn;
+        private int endColumn;
+
+        public Part(char[][] engineSchema, int row, int column) {
+            this.row = row;
+            this.startColumn = inferStartColumn(engineSchema, row, column);
+            this.endColumn = inferEndColumn(engineSchema, row, column);
+            this.value = getIntegerFromArray(engineSchema, this.row, this.startColumn, this.endColumn);
+        }
+
+        private int inferEndColumn(char[][] engineSchema, int row, int column) {
+            do {
+                if (isIndexExistInArray(engineSchema, row, column + 1)) {
+                    column++;
+                } else return column;
+            } while (Character.isDigit(engineSchema[row][column]));
+            return --column;
+        }
+
+        private int inferStartColumn(char[][] engineSchema, int row, int column) {
+            do {
+                if (isIndexExistInArray(engineSchema, row, column - 1)) {
+                    column--;
+                } else return column;
+            } while (Character.isDigit(engineSchema[row][column]));
+            return ++column;
+        }
+    }
 }

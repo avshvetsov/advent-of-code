@@ -17,7 +17,7 @@ class Day1Test {
 
     @Test
     public void day1Part1() {
-        assertThat(new Day1().partOneTony(Utils.parseInputByNewLine("src/main/resources/input 1-1, 1-2.txt")))
+        assertThat(new Day1().partOneAnton(Utils.parseInputByNewLine("src/main/resources/input 1-1, 1-2.txt")))
                 .isEqualTo(DAY_1_PART_1_CORRECT);
     }
     @Test
@@ -36,7 +36,7 @@ class Day1Test {
 
     @Test
     public void day1Part2() {
-        assertThat(new Day1().partTwoTony(Utils.parseInputByNewLine("src/main/resources/input 1-1, 1-2.txt")))
+        assertThat(new Day1().partTwoAnton(Utils.parseInputByNewLine("src/main/resources/input 1-1, 1-2.txt")))
                 .isEqualTo(DAY_1_PART_2_CORRECT);
     }
 

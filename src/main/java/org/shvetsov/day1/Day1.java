@@ -22,11 +22,11 @@ public class Day1 {
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);
         Day1 day = new Day1();
-        System.out.println(day.partOneTony(input));
-        System.out.println(day.partTwoTony(input));
+        System.out.println(day.partOneAnton(input));
+        System.out.println(day.partTwoAnton(input));
     }
 
-    public int partOneTony(List<String> input) {
+    public int partOneAnton(List<String> input) {
         int sum = 0;
         for (String word :
                 input) {
@@ -84,7 +84,7 @@ public class Day1 {
     private static final Map<String, Integer> reverseDigitValuesMap = digitValuesMap.entrySet().stream()
             .collect(toMap(e -> new StringBuilder(e.getKey()).reverse().toString(), Map.Entry::getValue));
 
-    public int partTwoTony(List<String> input) {
+    public int partTwoAnton(List<String> input) {
         int sum = 0;
         for (String word :
                 input) {

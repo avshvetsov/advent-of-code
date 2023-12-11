@@ -33,12 +33,12 @@ public class Benchmarks {
 
     @Benchmark
     public void day2part1Dany(Blackhole bh) {
-        bh.consume(Day2.part1Dany(Utils.parseInputByNewLine(Day2.INPUT_PATH).toArray(String[]::new)));
+        bh.consume(Day2Dany.part1Dany(Utils.parseInputDany(Day2Dany.INPUT)));
     }
 
     @Benchmark
     public void day2part2Dany(Blackhole bh) {
-        bh.consume(Day2.part2Dany(Utils.parseInputByNewLine(Day2.INPUT_PATH).toArray(String[]::new)));
+        bh.consume(Day2Dany.part2Dany(Utils.parseInputDany(Day2Dany.INPUT)));
     }
 
 }

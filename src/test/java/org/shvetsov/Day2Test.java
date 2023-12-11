@@ -2,6 +2,7 @@ package org.shvetsov;
 
 import org.junit.jupiter.api.Test;
 import org.shvetsov.day2.Day2;
+import org.shvetsov.day2.Day2Dany;
 import org.shvetsov.day2.Game;
 
 import java.util.List;
@@ -55,11 +56,11 @@ class Day2Test {
 
     @Test
     public void day2Part1Dany() {
-        assertThat(Day2.part1Dany(Utils.parseInputByNewLine(Day2.INPUT_PATH).toArray(String[]::new))).isEqualTo(DAY_2_PART_1_CORRECT);
+        assertThat(Day2Dany.part1Dany(Utils.parseInputDany(Day2Dany.INPUT))).isEqualTo(DAY_2_PART_1_CORRECT);
     }
     @Test
     public void day2Part2Dany() {
-        assertThat(Day2.part2Dany(Utils.parseInputByNewLine(Day2.INPUT_PATH).toArray(String[]::new))).isEqualTo(DAY_2_PART_2_CORRECT);
+        assertThat(Day2Dany.part2Dany(Utils.parseInputDany(Day2Dany.INPUT))).isEqualTo(DAY_2_PART_2_CORRECT);
     }
 
 }

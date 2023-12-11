@@ -1,7 +1,10 @@
 package org.shvetsov;
 
+import com.google.common.io.Resources;
 import lombok.SneakyThrows;
 
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -36,6 +39,15 @@ public class Utils {
             return false;
         }
         return true;
+    }
+
+    public static String[] parseInputDany(String pathToFile) {
+        try {
+            return Resources.toString(Resources.getResource(pathToFile), Charset.defaultCharset()).split("\r\n");
+        } catch (IOException e) {
+            System.out.println("Couldn't read file by path: " + pathToFile);
+            return new String[]{};
+        }
     }
 
 }

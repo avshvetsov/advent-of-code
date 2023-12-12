@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 //    RESULTS:
 //
-//    Benchmark                  Mode  Cnt    Score    Error  Units
-//    Benchmarks.day4part1Anton  avgt    3    1,255 ±  0,323  ms/op
-//    Benchmarks.day4part2Anton  avgt    3  164,546 ± 45,630  ms/op
+//    Benchmark                  Mode  Cnt  Score   Error  Units
+//    Benchmarks.day4part1Anton  avgt    3  1,241 ± 0,250  ms/op
+//    Benchmarks.day4part2Anton  avgt    3  1,129 ± 0,131  ms/op
 
 @BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 5)
@@ -30,13 +30,13 @@ public class Benchmarks {
     }
 
 //    @Benchmark
-//    public void day3part1Dany(Blackhole bh) {
-//        bh.consume(Day4Dany.part1(Utils.parseInputDany(Day3Dany.INPUT_NAME)));
+//    public void day4part1Dany(Blackhole bh) {
+//        bh.consume(Day4Dany.part1(Utils.parseInputDany(Day4Dany.INPUT_NAME)));
 //    }
 //
 //    @Benchmark
-//    public void day3part2Dany(Blackhole bh) {
-//        bh.consume(Day4Dany.part2(Utils.parseInputDany(Day3Dany.INPUT_NAME)));
+//    public void day4part2Dany(Blackhole bh) {
+//        bh.consume(Day4Dany.part2(Utils.parseInputDany(Day4Dany.INPUT_NAME)));
 //    }
 
 }

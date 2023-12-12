@@ -36,7 +36,7 @@ public class Day4 {
         for (int i = cardsString.size() - 1; i >= 0; i--) {
             Card2 card = new Card2(cardsString.get(i));
             CARD_DECK.put(card.getCardNumber(), card);
-            cardsTotal += card.getCardTotal();
+            cardsTotal += card.getTotalCards();
         }
         return cardsTotal;
     }
@@ -67,6 +67,7 @@ public class Day4 {
         private final int cardNumber;
         private final int wonNumber;
         private final List<Card2> wonCards;
+        private final int totalCards;
 
         public Card2(String cardData) {
             cardData = cardData.replaceAll(" +", " ");
@@ -76,6 +77,7 @@ public class Day4 {
                     .filter(CARD_DECK::containsKey)
                     .mapToObj(CARD_DECK::get)
                     .toList();
+            this.totalCards = countCardsTotal();
         }
 
         private int countWinningNumbers(String cardData) {
@@ -89,11 +91,11 @@ public class Day4 {
             return cardNumbers.size();
         }
 
-        public int getCardTotal() {
-            int totalWon = wonCards.stream()
-                    .mapToInt(Card2::getCardTotal)
+        private int countCardsTotal() {
+            int totalCardsWon = wonCards.stream()
+                    .mapToInt(Card2::getTotalCards)
                     .sum();
-            return totalWon + 1;
+            return totalCardsWon + 1;
         }
     }
 }

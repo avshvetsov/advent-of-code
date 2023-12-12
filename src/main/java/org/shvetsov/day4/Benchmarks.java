@@ -29,14 +29,14 @@ public class Benchmarks {
         bh.consume(new Day4().partTwoAnton(Utils.parseInputByNewLine(Day4.INPUT_PATH)));
     }
 
-//    @Benchmark
-//    public void day4part1Dany(Blackhole bh) {
-//        bh.consume(Day4Dany.part1(Utils.parseInputDany(Day4Dany.INPUT_NAME)));
-//    }
-//
-//    @Benchmark
-//    public void day4part2Dany(Blackhole bh) {
-//        bh.consume(Day4Dany.part2(Utils.parseInputDany(Day4Dany.INPUT_NAME)));
-//    }
+    @Benchmark
+    public void day4part1Dany(Blackhole bh) {
+        bh.consume(Day4Dany.part1(Utils.parseInputDany(Day4Dany.INPUT_NAME)));
+    }
+
+    @Benchmark
+    public void day4part2Dany(Blackhole bh) {
+        bh.consume(Day4Dany.part2(Utils.parseInputDany(Day4Dany.INPUT_NAME)));
+    }
 
 }

@@ -2,6 +2,7 @@ package org.shvetsov;
 
 import org.junit.jupiter.api.Test;
 import org.shvetsov.day4.Day4;
+import org.shvetsov.day4.Day4Dany;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,6 +29,12 @@ class Day4Test {
         System.out.println(result);
         assertThat(result).isEqualTo(DAY_4_PART_1_CORRECT);
     }
+    @Test
+    public void partOneInputDany() {
+        int result = Day4Dany.part1(Utils.parseInputDany(Day4.INPUT_NAME));
+        System.out.println(result);
+        assertThat(result).isEqualTo(DAY_4_PART_1_CORRECT);
+    }
 
     @Test
     public void partTwoExample() {
@@ -37,6 +44,13 @@ class Day4Test {
     @Test
     public void partTwoInput() {
         int result = day4.partTwoAnton(Utils.parseInputByNewLine(Day4.INPUT_PATH));
+        System.out.println(result);
+        assertThat(result).isEqualTo(DAY_4_PART_2_CORRECT);
+    }
+
+    @Test
+    public void partTwoInputDany() {
+        int result = Day4Dany.part2(Utils.parseInputDany(Day4.INPUT_NAME));
         System.out.println(result);
         assertThat(result).isEqualTo(DAY_4_PART_2_CORRECT);
     }

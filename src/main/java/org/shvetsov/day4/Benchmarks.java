@@ -9,8 +9,10 @@ import java.util.concurrent.TimeUnit;
 //    RESULTS:
 //
 //    Benchmark                  Mode  Cnt  Score   Error  Units
-//    Benchmarks.day4part1Anton  avgt    3  1,241 ± 0,250  ms/op
-//    Benchmarks.day4part2Anton  avgt    3  1,129 ± 0,131  ms/op
+//    Benchmarks.day4part1Anton  avgt    3  1,270 ± 0,269  ms/op
+//    Benchmarks.day4part1Dany   avgt    3  1,183 ± 0,104  ms/op
+//    Benchmarks.day4part2Anton  avgt    3  1,179 ± 0,104  ms/op
+//    Benchmarks.day4part2Dany   avgt    3  1,214 ± 0,358  ms/op
 
 @BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 5)

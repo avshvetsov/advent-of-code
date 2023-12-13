@@ -14,6 +14,7 @@ import java.util.stream.IntStream;
 public class Day4 {
 
     public static final String INPUT_PATH = "src/main/resources/input 4-1, 4-2.txt";
+    public static final String INPUT_NAME = "input 4-1, 4-2.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

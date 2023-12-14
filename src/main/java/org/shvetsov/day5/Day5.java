@@ -81,6 +81,7 @@ public class Day5 {
             }
             return output;
         }
+
         public List<Range> transformRange(Range input) {
             List<TransformationRange> knifes = new ArrayList<>();
             for (TransformationRange transformationRange :

@@ -1,7 +1,6 @@
 package org.shvetsov.day6;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.shvetsov.Utils;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -10,18 +9,6 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class Day6Dany {
-
-    public static final String INPUT_PATH = "src/main/resources/input 6-1, 6-2 Dany.txt";
-    public static final String INPUT_NAME = "input 6-1, 6-2 Dany.txt";
-    public static void main(String[] args) {
-        String[] input = Utils.parseInputDany(INPUT_NAME);
-
-        int result1 = part1(input);
-        long result2 = part2(input);
-
-        System.out.println("Result for part1: " + result1);
-        System.out.println("Result for part2: " + result2);
-    }
 
     public static int part1(String[] input) {
         Integer[] times = Arrays.stream(input[0].substring(input[0].indexOf(":") + 1).split(" "))

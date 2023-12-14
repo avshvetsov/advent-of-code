@@ -8,8 +8,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Day4Test {
 
-    private static final String EXAMPLE_PATH = "src/main/resources/example 4-1, 4-2.txt";
-    private static final String EXAMPLE_NAME = "example 4-1, 4-2.txt";
+    private static final String EXAMPLE_PATH = "src/main/resources/example 4.txt";
+    private static final String EXAMPLE_NAME = "example 4.txt";
     private static final Integer EXAMPLE_DAY_4_PART_1_CORRECT = 13;
     private static final Integer EXAMPLE_DAY_4_PART_2_CORRECT = 30;
 

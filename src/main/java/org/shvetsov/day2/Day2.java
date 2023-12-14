@@ -13,7 +13,7 @@ public class Day2 {
     public static final int MAX_GREEN = 13;
     public static final int MAX_BLUE = 14;
 
-    public static final String INPUT_PATH = "src/main/resources/input 2-1, 2-2.txt";
+    public static final String INPUT_PATH = "src/main/resources/input 2 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

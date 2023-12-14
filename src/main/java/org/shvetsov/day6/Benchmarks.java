@@ -6,6 +6,10 @@ import org.shvetsov.Utils;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.shvetsov.InputAnswer.*;
+import static org.shvetsov.InputAnswer.InputFormat.NAME;
+import static org.shvetsov.InputAnswer.InputFormat.PATH;
+
 //    Benchmark                  Mode  Cnt     Score     Error  Units
 //    Benchmarks.day6part1Anton  avgt    3     0,296 ±   0,078  ms/op
 //    Benchmarks.day6part1Dany   avgt    3     0,371 ±   0,028  ms/op
@@ -21,22 +25,22 @@ public class Benchmarks {
 
     @Benchmark
     public void day6part1Anton(Blackhole bh) {
-        bh.consume(new Day6().partOneAnton(Utils.parseInputByNewLine(Day6.INPUT_PATH)));
+        bh.consume(new Day6().partOneAnton(Utils.parseInputByNewLine(DAY_6_PART_1_REAL_ANTON.getInput(PATH))));
     }
 
     @Benchmark
     public void day6part2Anton(Blackhole bh) {
-        bh.consume(new Day6().partTwoAnton(Utils.parseInputByNewLine(Day6.INPUT_PATH)));
+        bh.consume(new Day6().partTwoAnton(Utils.parseInputByNewLine(DAY_6_PART_2_REAL_ANTON.getInput(PATH))));
     }
 
     @Benchmark
     public void day6part1Dany(Blackhole bh) {
-        bh.consume(Day6Dany.part1(Utils.parseInputDany(Day6Dany.INPUT_NAME)));
+        bh.consume(Day6Dany.part1(Utils.parseInputDany(DAY_6_PART_1_REAL_DANY.getInput(NAME))));
     }
 
     @Benchmark
     public void day6part2Dany(Blackhole bh) {
-        bh.consume(Day6Dany.part2(Utils.parseInputDany(Day6Dany.INPUT_NAME)));
+        bh.consume(Day6Dany.part2(Utils.parseInputDany(DAY_6_PART_2_REAL_DANY.getInput(NAME))));
     }
 
 }

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class Day4Dany {
 
-    public static final String INPUT_NAME = "input 4-1, 4-2.txt";
+    public static final String INPUT_NAME = "input 4 Anton.txt";
 
     public static int part1(String[] input) {
         int result = 0;

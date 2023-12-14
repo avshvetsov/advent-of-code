@@ -12,7 +12,7 @@ import static org.shvetsov.Utils.isIndexExistInArray;
  */
 public class Day3 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 3-1, 3-2.txt";
+    public static final String INPUT_PATH = "src/main/resources/input 3 Anton.txt";
 
     public static void main(String[] args) {
         char[][] input = Utils.parseInputInTwoDimArray(INPUT_PATH);

@@ -12,12 +12,6 @@ import java.util.List;
 
 public class Utils {
 
-    @SneakyThrows
-    public static List<String> parseInputByNewLine(String pathToFile) {
-        Path path = Paths.get(pathToFile);
-        return Files.readAllLines(path);
-    }
-
     public static char[][] parseInputInTwoDimArray(String pathToFile) {
         List<String> lines = parseInputByNewLine(pathToFile);
         int columns = lines.stream()
@@ -41,6 +35,14 @@ public class Utils {
         return true;
     }
 
+
+
+    @SneakyThrows
+    public static List<String> parseInputByNewLine(String pathToFile) {
+        Path path = Paths.get(pathToFile);
+        return Files.readAllLines(path);
+    }
+
     public static String[] parseInputDany(String pathToFile) {
         try {
             return Resources.toString(Resources.getResource(pathToFile), Charset.defaultCharset()).split("\r\n");
@@ -49,5 +51,4 @@ public class Utils {
             return new String[]{};
         }
     }
-
 }

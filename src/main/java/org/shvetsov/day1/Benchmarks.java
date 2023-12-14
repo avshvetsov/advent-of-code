@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class Benchmarks {
 
-    public static final String INPUT_PATH = "src/main/resources/input 1-1, 1-2.txt";
+    public static final String INPUT_PATH = "src/main/resources/input 1 Anton.txt";
 
     @Benchmark
     public void day1part1(Blackhole bh) {

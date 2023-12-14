@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Day2Test {
 
-    private static final String EXAMPLE_PATH = "src/main/resources/example 2-1, 2-2.txt";
+    private static final String EXAMPLE_PATH = "src/main/resources/example 2.txt";
     private static final Integer EXAMPLE_DAY_2_PART_2_CORRECT = 2286;
 
     private static final Integer DAY_2_PART_1_CORRECT = 2101;

@@ -9,8 +9,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Day5Test {
 
-    private static final String EXAMPLE_PATH = "src/main/resources/example 5-1, 5-2.txt";
-    private static final String EXAMPLE_NAME = "example 5-1, 5-2.txt";
+    private static final String EXAMPLE_PATH = "src/main/resources/example 5.txt";
+    private static final String EXAMPLE_NAME = "example 5.txt";
     private static final long EXAMPLE_ANSWER_PART_1 = 35L;
     private static final long EXAMPLE_ANSWER_PART_2 = 46L;
 
@@ -46,7 +46,7 @@ class Day5Test {
     @Test
     @Disabled
     public void partTwoInputDany() {
-        long result = Day5Dany.part2(Utils.parseInputDany("input 5-1, 5-2.txt"));
+        long result = Day5Dany.part2(Utils.parseInputDany("input 5 Anton.txt"));
         System.out.println(result);
         assertThat(result).isEqualTo(INPUT_ANSWER_PART_2);
     }

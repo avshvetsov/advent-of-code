@@ -17,7 +17,7 @@ import static java.util.stream.Collectors.toMap;
  */
 public class Day1 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 1-1, 1-2.txt";
+    public static final String INPUT_PATH = "src/main/resources/input 1 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

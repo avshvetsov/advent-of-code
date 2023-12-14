@@ -13,7 +13,7 @@ import java.util.stream.LongStream;
  */
 public class Day5 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 5-1, 5-2.txt";
+    public static final String INPUT_PATH = "src/main/resources/input 5 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

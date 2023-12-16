@@ -58,3 +58,11 @@ Benchmarks.day7part1Dany   avgt    3  6,279 ± 1,595  ms/op
 Benchmarks.day7part2Anton  avgt    3  1,311 ± 0,115  ms/op
 Benchmarks.day7part2Dany   avgt    3  6,903 ± 2,083  ms/op
 ```
+### Day 8
+```
+Benchmark                  Mode  Cnt  Score   Error  Units
+Benchmarks.day8part1Anton  avgt    3  0,638 ± 0,083  ms/op
+Benchmarks.day8part1Dany   avgt    3  0,962 ± 0,062  ms/op
+Benchmarks.day8part2Anton  avgt    3  1,922 ± 0,053  ms/op
+Benchmarks.day8part2Dany   avgt    3  7,984 ± 2,176  ms/op
+```

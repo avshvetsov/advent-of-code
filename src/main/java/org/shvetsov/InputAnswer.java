@@ -25,7 +25,15 @@ public enum InputAnswer {
     DAY_8_PART_1_REAL_ANTON("8",1,"Anton", InputType.REAL, 18157),
     DAY_8_PART_2_REAL_ANTON("8",2,"Anton", InputType.REAL, new BigInteger("14299763833181")),
     DAY_8_PART_1_REAL_DANY("8",1,"Dany", InputType.REAL, 21251),
-    DAY_8_PART_2_REAL_DANY("8",2,"Dany", InputType.REAL, new BigInteger("11678319315857"));
+    DAY_8_PART_2_REAL_DANY("8",2,"Dany", InputType.REAL, new BigInteger("11678319315857")),
+
+    DAY_9_PART_1_EXAMPLE("9",1,null, InputType.EXAMPLE, 114),
+    DAY_9_PART_2_EXAMPLE("9",2,null, InputType.EXAMPLE, 2),
+    DAY_9_PART_1_REAL_ANTON("9",1,"Anton", InputType.REAL, 1_819_125_966),
+    DAY_9_PART_2_REAL_ANTON("9",2,"Anton", InputType.REAL, 1140),
+    DAY_9_PART_1_REAL_DANY("9",1,"Dany", InputType.REAL, 1_731_106_378),
+    DAY_9_PART_2_REAL_DANY("9",2,"Dany", InputType.REAL, 1087),
+    ;
 
     private static final String RESOURCES = "src/main/resources/";
 

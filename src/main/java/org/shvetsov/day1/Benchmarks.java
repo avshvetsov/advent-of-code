@@ -2,7 +2,7 @@ package org.shvetsov.day1;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class Benchmarks {
 
-    public static final String INPUT_PATH = "src/main/resources/input 1 Anton.txt";
+    public static final String INPUT_PATH = "src/main/resources/day1/input 1 Anton.txt";
 
     @Benchmark
     public void day1part1(Blackhole bh) {

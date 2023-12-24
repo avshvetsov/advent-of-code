@@ -1,8 +1,9 @@
-package org.shvetsov;
+package org.shvetsov.day1;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.shvetsov.day1.Day1;
+import org.shvetsov.utils.Utils;
 
 import java.util.Map;
 import java.util.OptionalLong;
@@ -17,7 +18,7 @@ class Day1Test {
 
     @Test
     public void day1Part1() {
-        assertThat(new Day1().partOneAnton(Utils.parseInputByNewLine("src/main/resources/input 1 Anton.txt")))
+        assertThat(new Day1().partOneAnton(Utils.parseInputByNewLine("src/main/resources/day1/input 1 Anton.txt")))
                 .isEqualTo(DAY_1_PART_1_CORRECT);
     }
     @Test
@@ -28,7 +29,7 @@ class Day1Test {
 
     @Test
     public void day1Part1Dany() {
-        assertThat(Day1.partOneDany(Utils.parseInputByNewLine("src/main/resources/input 1 Anton.txt").toArray(String[]::new)))
+        assertThat(Day1.partOneDany(Utils.parseInputByNewLine("src/main/resources/day1/input 1 Anton.txt").toArray(String[]::new)))
                 .isEqualTo(DAY_1_PART_1_CORRECT);
     }
 
@@ -36,13 +37,13 @@ class Day1Test {
 
     @Test
     public void day1Part2() {
-        assertThat(new Day1().partTwoAnton(Utils.parseInputByNewLine("src/main/resources/input 1 Anton.txt")))
+        assertThat(new Day1().partTwoAnton(Utils.parseInputByNewLine("src/main/resources/day1/input 1 Anton.txt")))
                 .isEqualTo(DAY_1_PART_2_CORRECT);
     }
 
     @Test
     public void day1Part2Dany() {
-        assertThat(Day1.partTwoDany(Utils.parseInputByNewLine("src/main/resources/input 1 Anton.txt").toArray(String[]::new)))
+        assertThat(Day1.partTwoDany(Utils.parseInputByNewLine("src/main/resources/day1/input 1 Anton.txt").toArray(String[]::new)))
                 .isEqualTo(DAY_1_PART_2_CORRECT);
     }
 

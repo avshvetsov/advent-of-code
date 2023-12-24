@@ -1,7 +1,7 @@
 package org.shvetsov.day8.dany;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.math.BigInteger;
 import java.util.*;
@@ -10,7 +10,7 @@ public class Day8Dany {
     public static void main(String[] args) {
 
         // max is 12 red cubes, 13 green cubes, and 14 blue cubes
-        String[] input = Utils.parseInputDany("input 8 Dany.txt");
+        String[] input = Utils.parseInputDany("day8/input 8 Dany.txt");
 
         int result1 = part1(input);
         BigInteger result2 = part2(input);

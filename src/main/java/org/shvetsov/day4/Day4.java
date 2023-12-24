@@ -2,7 +2,7 @@ package org.shvetsov.day4;
 
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -13,8 +13,8 @@ import java.util.stream.IntStream;
  */
 public class Day4 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 4 Anton.txt";
-    public static final String INPUT_NAME = "input 4 Anton.txt";
+    public static final String INPUT_PATH = "src/main/resources/day4/input 4 Anton.txt";
+    public static final String INPUT_NAME = "day4/input 4 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

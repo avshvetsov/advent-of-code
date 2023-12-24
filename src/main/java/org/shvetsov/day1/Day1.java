@@ -2,7 +2,7 @@ package org.shvetsov.day1;
 
 import lombok.SneakyThrows;
 import one.util.streamex.EntryStream;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -17,7 +17,7 @@ import static java.util.stream.Collectors.toMap;
  */
 public class Day1 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 1 Anton.txt";
+    public static final String INPUT_PATH = "src/main/resources/day1/input 1 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

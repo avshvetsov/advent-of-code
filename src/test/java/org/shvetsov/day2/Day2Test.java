@@ -1,9 +1,10 @@
-package org.shvetsov;
+package org.shvetsov.day2;
 
 import org.junit.jupiter.api.Test;
 import org.shvetsov.day2.Day2;
 import org.shvetsov.day2.Day2Dany;
 import org.shvetsov.day2.Game;
+import org.shvetsov.utils.Utils;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class Day2Test {
 
-    private static final String EXAMPLE_PATH = "src/main/resources/example 2.txt";
+    private static final String EXAMPLE_PATH = "src/main/resources/day2/example 2.txt";
     private static final Integer EXAMPLE_DAY_2_PART_2_CORRECT = 2286;
 
     private static final Integer DAY_2_PART_1_CORRECT = 2101;

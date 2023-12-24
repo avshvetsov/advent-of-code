@@ -2,7 +2,7 @@ package org.shvetsov.day7;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 import org.shvetsov.day7.dany.Day7Dany;
 
 import java.util.concurrent.TimeUnit;

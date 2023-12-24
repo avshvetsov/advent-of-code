@@ -3,7 +3,7 @@ package org.shvetsov.day5;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.*;
 import java.util.stream.LongStream;
@@ -13,7 +13,7 @@ import java.util.stream.LongStream;
  */
 public class Day5 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 5 Anton.txt";
+    public static final String INPUT_PATH = "src/main/resources/day5/input 5 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

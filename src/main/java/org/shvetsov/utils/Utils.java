@@ -1,6 +1,7 @@
-package org.shvetsov;
+package org.shvetsov.utils;
 
 import com.google.common.io.Resources;
+import com.google.common.primitives.Chars;
 import lombok.SneakyThrows;
 
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Utils {
@@ -29,6 +31,12 @@ public class Utils {
         return charsTwoDimArray;
     }
 
+    public static List<List<Character>> parseInputInCharacterGrid(List<String> inputLines) {
+        List<List<Character>> list = new ArrayList<>();
+        inputLines.forEach(line -> list.add(new ArrayList<>(Chars.asList(line.toCharArray()))));
+        return list;
+    }
+
     public static boolean isIndexExistInArray(char[][] array, int row, int column) {
         if (row < 0 || row >= array.length) {
             return false;
@@ -38,7 +46,6 @@ public class Utils {
         }
         return true;
     }
-
 
 
     @SneakyThrows

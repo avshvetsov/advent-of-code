@@ -1,6 +1,6 @@
 package org.shvetsov.day2;
 
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class Day2 {
     public static final int MAX_GREEN = 13;
     public static final int MAX_BLUE = 14;
 
-    public static final String INPUT_PATH = "src/main/resources/input 2 Anton.txt";
+    public static final String INPUT_PATH = "src/main/resources/day2/input 2 Anton.txt";
 
     public static void main(String[] args) {
         List<String> input = Utils.parseInputByNewLine(INPUT_PATH);

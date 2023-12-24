@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Day5Dany {
 
-    public static final String INPUT_NAME = "input 5 Anton.txt";
+    public static final String INPUT_NAME = "day5/input 5 Anton.txt";
 
     public static long part1(String[] input) {
         Set<Long> seeds = Arrays.stream(input[0].substring(input[0].indexOf(": ") + 2).split(" "))

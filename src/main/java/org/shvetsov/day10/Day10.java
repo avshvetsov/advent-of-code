@@ -1,15 +1,12 @@
 package org.shvetsov.day10;
 
 import lombok.Getter;
-import org.apache.commons.lang3.tuple.Pair;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
 

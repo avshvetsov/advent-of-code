@@ -1,7 +1,7 @@
 package org.shvetsov.day9.dany;
 
 
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 public class Day9Task {
 

@@ -1,16 +1,17 @@
-package org.shvetsov;
+package org.shvetsov.day3;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.shvetsov.day3.Day3;
 import org.shvetsov.day3.Day3Dany;
+import org.shvetsov.utils.Utils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Day3Test {
 
-    private static final String EXAMPLE_PATH = "src/main/resources/example 3.txt";
-    private static final String EXAMPLE_NAME = "example 3.txt";
+    private static final String EXAMPLE_PATH = "src/main/resources/day3/example 3.txt";
+    private static final String EXAMPLE_NAME = "day3/example 3.txt";
     private static final Integer EXAMPLE_DAY_3_PART_1_CORRECT = 4366;
     private static final Integer EXAMPLE_DAY_3_PART_2_CORRECT = 467835;
 

@@ -3,7 +3,7 @@ package org.shvetsov.day7.dany;
 
 import one.util.streamex.EntryStream;
 import org.apache.commons.lang3.tuple.Pair;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import java.util.Map;
 public class Day7Dany {
     public static void main(String[] args) {
 
-        String[] input = Utils.parseInputDany("input 7 Dany.txt");
+        String[] input = Utils.parseInputDany("day7/input 7 Dany.txt");
 
         long result1 = part1(input);
         long result2 = part2(input);

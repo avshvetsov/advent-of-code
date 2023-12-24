@@ -1,16 +1,17 @@
-package org.shvetsov;
+package org.shvetsov.day5;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.shvetsov.day5.Day5;
 import org.shvetsov.day5.Day5Dany;
+import org.shvetsov.utils.Utils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class Day5Test {
 
-    private static final String EXAMPLE_PATH = "src/main/resources/example 5.txt";
-    private static final String EXAMPLE_NAME = "example 5.txt";
+    private static final String EXAMPLE_PATH = "src/main/resources/day5/example 5.txt";
+    private static final String EXAMPLE_NAME = "day5/example 5.txt";
     private static final long EXAMPLE_ANSWER_PART_1 = 35L;
     private static final long EXAMPLE_ANSWER_PART_2 = 46L;
 
@@ -46,7 +47,7 @@ class Day5Test {
     @Test
     @Disabled
     public void partTwoInputDany() {
-        long result = Day5Dany.part2(Utils.parseInputDany("input 5 Anton.txt"));
+        long result = Day5Dany.part2(Utils.parseInputDany("day5/input 5 Anton.txt"));
         System.out.println(result);
         assertThat(result).isEqualTo(INPUT_ANSWER_PART_2);
     }

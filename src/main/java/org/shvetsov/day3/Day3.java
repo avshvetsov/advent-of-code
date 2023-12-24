@@ -1,18 +1,18 @@
 package org.shvetsov.day3;
 
 import lombok.Data;
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.*;
 
-import static org.shvetsov.Utils.isIndexExistInArray;
+import static org.shvetsov.utils.Utils.isIndexExistInArray;
 
 /**
  * <a href="https://adventofcode.com/2023/day/3">Day 3</a>
  */
 public class Day3 {
 
-    public static final String INPUT_PATH = "src/main/resources/input 3 Anton.txt";
+    public static final String INPUT_PATH = "src/main/resources/day3/input 3 Anton.txt";
 
     public static void main(String[] args) {
         char[][] input = Utils.parseInputInTwoDimArray(INPUT_PATH);

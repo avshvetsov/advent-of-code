@@ -1,13 +1,13 @@
 package org.shvetsov.day3;
 
-import org.shvetsov.Utils;
+import org.shvetsov.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Day3Dany {
 
-    public static final String INPUT_NAME = "input 3 Anton.txt";
+    public static final String INPUT_NAME = "day3/input 3 Anton.txt";
     public static void main(String[] args) {
         String[] input = Utils.parseInputDany(INPUT_NAME);
 

@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class Day2Dany {
 
-    public static final String INPUT = "input 2 Anton.txt";
+    public static final String INPUT = "day2/input 2 Anton.txt";
 
 
     private static final Map<String, Integer> part1Limits = Map.of("red", 12, "green", 13, "blue", 14);

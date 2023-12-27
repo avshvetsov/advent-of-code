@@ -1,6 +1,6 @@
 package org.shvetsov.utils;
 
-import com.google.common.primitives.Chars;
+import lombok.EqualsAndHashCode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+@EqualsAndHashCode
 public class Grid<T> {
 
     protected final List<List<T>> elements;
@@ -28,6 +29,12 @@ public class Grid<T> {
 
     public static Grid<Character> ofCharacter(List<String> lines) {
         return new Grid<>(Utils.parseInputInCharacterGrid(lines));
+    }
+
+    public List<List<T>> getElementsCopy() {
+        return elements.stream()
+                .map(ArrayList::new)
+                .collect(Collectors.toList());
     }
 
     public void addRow(List<T> row) {
@@ -77,8 +84,16 @@ public class Grid<T> {
         return this.elements.get(point.r).get(point.c);
     }
 
+    public T getValue(int row, int col) {
+        return this.elements.get(row).get(col);
+    }
+
     public void setValue(Point point, T value) {
         this.elements.get(point.r).set(point.c, value);
+    }
+
+    public void setValue(int row, int col, T value) {
+        this.elements.get(row).set(col, value);
     }
 
     public Optional<Point> getPoint(Point point) {
@@ -97,6 +112,12 @@ public class Grid<T> {
         return IntStream.range(0, sizeRow())
                 .mapToObj(row -> IntStream.range(0, sizeColumn()).mapToObj(col -> Point.of(row, col)).collect(Collectors.toList())).flatMap(List::stream)
                 .collect(Collectors.toList());
+    }
+
+    public void swap(Point point1, Point point2) {
+        T temp = getValue(point1);
+        setValue(point1, getValue(point2));
+        setValue(point2, temp);
     }
 
     public void draw(Function<T, String> toStringFunction) {

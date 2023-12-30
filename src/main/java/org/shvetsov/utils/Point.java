@@ -26,6 +26,23 @@ public class Point {
         return Math.abs(target.r - this.r) + Math.abs(target.c - this.c);
     }
 
+    public Point move(Direction direction) {
+        return switch (direction) {
+            case NORTH -> up();
+            case EAST -> right();
+            case SOUTH -> down();
+            case WEST -> left();
+        };
+    }
+    public Point moveThis(Direction direction) {
+        return switch (direction) {
+            case NORTH -> upThis();
+            case EAST -> rightThis();
+            case SOUTH -> downThis();
+            case WEST -> leftThis();
+        };
+    }
+
     public Point up() {
         return new Point(r - 1, c);
     }

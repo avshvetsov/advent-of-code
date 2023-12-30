@@ -1,6 +1,7 @@
 package org.shvetsov.day14;
 
 import lombok.EqualsAndHashCode;
+import org.shvetsov.utils.Direction;
 import org.shvetsov.utils.Grid;
 import org.shvetsov.utils.Point;
 import org.shvetsov.utils.Utils;
@@ -22,7 +23,7 @@ public class Day14 {
 
     public int partOneAnton(List<String> inputList) {
         Platform platform = Platform.ofCharacter(inputList);
-        platform.tilting(Platform.Direction.NORTH);
+        platform.tilting(Direction.NORTH);
 //        platform.draw(String::valueOf);
         int rowsCount = platform.sizeRow();
         return IntStream.range(0, rowsCount)
@@ -39,10 +40,10 @@ public class Day14 {
         map.put(new Platform(platform.getElementsCopy()), circle);
         boolean condition = true;
         do {
-            platform.tilting(Platform.Direction.NORTH);
-            platform.tilting(Platform.Direction.WEST);
-            platform.tilting(Platform.Direction.SOUTH);
-            platform.tilting(Platform.Direction.EAST);
+            platform.tilting(Direction.NORTH);
+            platform.tilting(Direction.WEST);
+            platform.tilting(Direction.SOUTH);
+            platform.tilting(Direction.EAST);
             circle++;
             if (!map.containsKey(platform)) {
                 map.put(new Platform(platform.getElementsCopy()), circle);
@@ -138,13 +139,6 @@ public class Day14 {
                 }
             }
         }
-
-
-        public enum Direction {
-            NORTH, WEST, SOUTH, EAST
-        }
-
-
     }
 
 

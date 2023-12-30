@@ -1,5 +1,7 @@
 package org.shvetsov.day13.dany;
 
+import org.shvetsov.utils.Utils;
+
 import java.util.Arrays;
 
 import static org.shvetsov.day13.dany.MirrorFinder.calculateMirrorScore;
@@ -30,7 +32,7 @@ public class Day13Task {
             }
             int end = j;
             String[] framesString = Arrays.copyOfRange(input, start, end);
-            char[][] frames = stringArrayToChars(framesString);
+            char[][] frames = Utils.stringArrayToCharsDany(framesString);
             result += calculateMirrorScore(frames);
             i = j;
         }
@@ -49,25 +51,12 @@ public class Day13Task {
             }
             int end = j;
             String[] framesString = Arrays.copyOfRange(input, start, end);
-            char[][] frames = stringArrayToChars(framesString);
+            char[][] frames = Utils.stringArrayToCharsDany(framesString);
             result += calculateMirrorScorePart2(frames);
             i = j;
         }
 
         return result;
-    }
-
-
-    public static char[][] stringArrayToChars(String[] input) {
-        int height = input.length;
-        int width = input[0].length();
-        char[][] chars = new char[height][width];
-        for (int i = 0; i < input.length; i++) {
-            for (int j = 0; j < input[i].length(); j++) {
-                chars[i][j] = input[i].charAt(j);
-            }
-        }
-        return chars;
     }
 
 }

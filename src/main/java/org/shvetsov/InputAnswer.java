@@ -69,15 +69,15 @@ public enum InputAnswer {
     DAY_14_PART_2_EXAMPLE("14",2,null, InputType.EXAMPLE, 64),
     DAY_14_PART_1_REAL_ANTON("14",1,"Anton", InputType.REAL, 110677),
     DAY_14_PART_2_REAL_ANTON("14",2,"Anton", InputType.REAL, 90551),
-//    DAY_14_PART_1_REAL_DANY("14",1,"Dany", InputType.REAL, -1),
-//    DAY_14_PART_2_REAL_DANY("14",2,"Dany", InputType.REAL, -1),
+    DAY_14_PART_1_REAL_DANY("14",1,"Dany", InputType.REAL, 109665),
+    DAY_14_PART_2_REAL_DANY("14",2,"Dany", InputType.REAL, 96061),
 
     DAY_15_PART_1_EXAMPLE("15",1,null, InputType.EXAMPLE, 1320),
     DAY_15_PART_2_EXAMPLE("15",2,null, InputType.EXAMPLE, 145),
     DAY_15_PART_1_REAL_ANTON("15",1,"Anton", InputType.REAL, 506269),
     DAY_15_PART_2_REAL_ANTON("15",2,"Anton", InputType.REAL, 264021),
-//    DAY_15_PART_1_REAL_DANY("15",1,"Dany", InputType.REAL, -1),
-//    DAY_15_PART_2_REAL_DANY("15",2,"Dany", InputType.REAL, -1),
+    DAY_15_PART_1_REAL_DANY("15",1,"Dany", InputType.REAL, 506891),
+    DAY_15_PART_2_REAL_DANY("15",2,"Dany", InputType.REAL, 230462),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

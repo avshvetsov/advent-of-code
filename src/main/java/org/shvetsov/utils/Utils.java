@@ -47,12 +47,13 @@ public class Utils {
         return true;
     }
 
-
     @SneakyThrows
     public static List<String> parseInputByNewLine(String pathToFile) {
         Path path = Paths.get(pathToFile);
         return Files.readAllLines(path);
     }
+
+
 
     public static String[] parseInputDany(String pathToFile) {
         try {
@@ -61,5 +62,17 @@ public class Utils {
             System.out.println("Couldn't read file by path: " + pathToFile);
             return new String[]{};
         }
+    }
+
+    public static char[][] stringArrayToCharsDany(String[] input) {
+        int height = input.length;
+        int width = input[0].length();
+        char[][] chars = new char[height][width];
+        for (int i = 0; i < input.length; i++) {
+            for (int j = 0; j < input[i].length(); j++) {
+                chars[i][j] = input[i].charAt(j);
+            }
+        }
+        return chars;
     }
 }

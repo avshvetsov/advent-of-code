@@ -36,22 +36,22 @@ public class Day16 {
         do {
             startPoints.add(Pair.of(point, Direction.SOUTH));
             point = point.right();
-        } while (contraption.containsPoint(point));
+        } while (contraption.isContainPoint(point));
         point = Point.of(0, contraption.sizeColumn() - 1);
         do {
             startPoints.add(Pair.of(point, Direction.WEST));
             point = point.down();
-        } while (contraption.containsPoint(point));
+        } while (contraption.isContainPoint(point));
         point = Point.of(contraption.sizeRow() - 1, contraption.sizeColumn() - 1);
         do {
             startPoints.add(Pair.of(point, Direction.NORTH));
             point = point.left();
-        } while (contraption.containsPoint(point));
+        } while (contraption.isContainPoint(point));
         point = Point.of(contraption.sizeRow() - 1, 0);
         do {
             startPoints.add(Pair.of(point, Direction.EAST));
             point = point.up();
-        } while (contraption.containsPoint(point));
+        } while (contraption.isContainPoint(point));
 
         List<Long> results = new ArrayList<>();
         for (Pair<Point, Direction> start : startPoints) {
@@ -90,7 +90,7 @@ public class Day16 {
             Point currentPoint = pointDirection.getLeft();
             Direction currentDirection = pointDirection.getRight();
 
-            if (!containsPoint(currentPoint)) {
+            if (!isContainPoint(currentPoint)) {
                 return;
             }
             if (energized.contains(pointDirection)) {

@@ -11,6 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Utils {
 
@@ -34,6 +35,11 @@ public class Utils {
     public static List<List<Character>> parseInputInCharacterGrid(List<String> inputLines) {
         List<List<Character>> list = new ArrayList<>();
         inputLines.forEach(line -> list.add(new ArrayList<>(Chars.asList(line.toCharArray()))));
+        return list;
+    }
+    public static List<List<Integer>> parseInputInIntegerGrid(List<String> inputLines) {
+        List<List<Integer>> list = new ArrayList<>();
+        inputLines.forEach(line -> list.add(Chars.asList(line.toCharArray()).stream().map(Character::getNumericValue).collect(Collectors.toList())));
         return list;
     }
 

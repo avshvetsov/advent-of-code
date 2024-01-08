@@ -2,10 +2,7 @@ package org.shvetsov.utils;
 
 import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -100,7 +97,7 @@ public class Grid<T> {
         return  (point.c >= 0 && point.c < sizeColumn() && point.r >= 0 && point.r < sizeRow()) ? Optional.of(point) : Optional.empty();
     }
 
-    public boolean containsPoint(Point point) {
+    public boolean isContainPoint(Point point) {
         return getPoint(point).isPresent();
     }
 
@@ -118,6 +115,27 @@ public class Grid<T> {
         T temp = getValue(point1);
         setValue(point1, getValue(point2));
         setValue(point2, temp);
+    }
+
+    public List<T> getNeighbourValues(Point point) {
+        return EnumSet.allOf(Direction.class).stream()
+                .map(point::move)
+                .filter(this::isContainPoint)
+                .map(this::getValue)
+                .collect(Collectors.toList());
+    }
+
+    public List<Point> getNeighbourPoints(Point point) {
+        return EnumSet.allOf(Direction.class).stream()
+                .map(point::move)
+                .filter(this::isContainPoint)
+                .collect(Collectors.toList());
+    }
+
+    public List<Direction> getNeighbourDirections(Point point) {
+        return EnumSet.allOf(Direction.class).stream()
+                .filter(direction -> isContainPoint(point.move(direction)))
+                .collect(Collectors.toList());
     }
 
     public void draw(Function<T, String> toStringFunction) {

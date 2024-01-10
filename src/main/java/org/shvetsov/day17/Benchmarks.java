@@ -10,10 +10,13 @@ import static org.shvetsov.InputAnswer.*;
 import static org.shvetsov.InputAnswer.InputFormat.PATH;
 
 
+//    Benchmark                   Mode  Cnt     Score      Error  Units
+//    Benchmarks.day17part1Anton  avgt    3   435,354 ±  104,109  ms/op
+//    Benchmarks.day17part2Anton  avgt    3  1693,824 ± 3788,144  ms/op
 
 @BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 3)
-@Measurement(iterations = 3, time = 3)
+@Measurement(iterations = 3, time = 10)
 @Fork(0)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class Benchmarks {

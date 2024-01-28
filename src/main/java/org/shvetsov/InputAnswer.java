@@ -92,6 +92,13 @@ public enum InputAnswer {
     DAY_17_PART_2_REAL_ANTON("17",2,"Anton", InputType.REAL, 930),
 //    DAY_17_PART_1_REAL_DANY("17",1,"Dany", InputType.REAL, 506891),
 //    DAY_17_PART_2_REAL_DANY("17",2,"Dany", InputType.REAL, 230462),
+
+    DAY_18_PART_1_EXAMPLE("18",1,null, InputType.EXAMPLE, 62),
+    DAY_18_PART_2_EXAMPLE("18",2,null, InputType.EXAMPLE, 952_408_144_115L),
+    DAY_18_PART_1_REAL_ANTON("18",1,"Anton", InputType.REAL, 42317),
+    DAY_18_PART_2_REAL_ANTON("18",2,"Anton", InputType.REAL, -1),
+//    DAY_18_PART_1_REAL_DANY("18",1,"Dany", InputType.REAL, 506891),
+//    DAY_18_PART_2_REAL_DANY("18",2,"Dany", InputType.REAL, 230462),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

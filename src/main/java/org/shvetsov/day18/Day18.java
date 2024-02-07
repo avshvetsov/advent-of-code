@@ -18,14 +18,61 @@ public class Day18 {
 
     }
 
-    public int partOneAnton(List<String> inputList) {
+    public int partOneAntonInefficient(List<String> inputList) {
         DigPlan plan = new DigPlan(inputList);
         plan.sort();
         return plan.getSize();
     }
 
+    //In this task we need 2 forulas:
+    //- https://en.wikipedia.org/wiki/Shoelace_formula - for rectangular polygon it simplifies to src/main/resources/day18/Shoelace formula.png
+    //- https://en.wikipedia.org/wiki/Pick%27s_theorem
+    public int partOneAnton(List<String> inputList) {
+        int area = 0;
+        int border = 0;
+        Point point = Point.of(0, 1);
+        for (int i = 0; i < inputList.size(); i++) {
+            String[] split = inputList.get(i).split(" ");
+            Direction direction = getDirection(split[0].charAt(0));
+            int length = Integer.parseInt(split[1]);
+            point = point.move(direction, length);
+            int sign = i % 2 == 0 ? 1 : -1;
+//            Shoelace formula
+            area += sign * point.r * point.c;
+            border += length;
+        }
+//        Pick's theorem
+        return (Math.abs(area) - border/2 + 1) + border;
+    }
+
     public long partTwoAnton(List<String> inputList) {
-        return 0;
+        long area = 0L;
+        long border = 0L;
+        Point point = Point.of(0, 0);
+        List<Point> points = new ArrayList<>();
+        for (int i = 0; i < inputList.size(); i++) {
+            String hexadecimal = StringUtils.substringBetween(inputList.get(i), "(#", ")");
+            Direction direction = getDirection(hexadecimal.charAt(5));
+            int length = Integer.parseInt(hexadecimal.substring(0, 5), 16);
+            point = point.move(direction, length);
+            points.add(point);
+            long sign = i % 2 == 0 ? 1L : -1L;
+//            Shoelace formula
+            area += sign * point.r * point.c;
+            border += length;
+        }
+//        Pick's theorem
+        return (Math.abs(area) - border/2 + 1) + border;
+    }
+
+    private Direction getDirection(Character character) {
+        return switch (character) {
+            case '0', 'R' -> Direction.EAST;
+            case '1', 'D' -> Direction.SOUTH;
+            case '2', 'L' -> Direction.WEST;
+            case '3', 'U' -> Direction.NORTH;
+            default -> throw new IllegalArgumentException("Illegal direction character");
+        };
     }
 
     @Getter

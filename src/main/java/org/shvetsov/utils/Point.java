@@ -34,6 +34,15 @@ public class Point {
             case WEST -> left();
         };
     }
+
+    public Point move(Direction direction, int length) {
+        return switch (direction) {
+            case NORTH -> up(length);
+            case EAST -> right(length);
+            case SOUTH -> down(length);
+            case WEST -> left(length);
+        };
+    }
     public Point moveThis(Direction direction) {
         return switch (direction) {
             case NORTH -> upThis();
@@ -44,19 +53,31 @@ public class Point {
     }
 
     public Point up() {
-        return new Point(r - 1, c);
+        return up(1);
+    }
+    public Point up(int length) {
+        return new Point(r - length, c);
     }
 
     public Point down() {
-        return new Point(r + 1, c);
+        return down(1);
+    }
+    public Point down(int length) {
+        return new Point(r + length, c);
     }
 
     public Point right() {
-        return new Point(r, c + 1);
+        return right(1);
+    }
+    public Point right(int length) {
+        return new Point(r, c + length);
     }
 
     public Point left() {
-        return new Point(r, c - 1);
+        return left(1);
+    }
+    public Point left(int length) {
+        return new Point(r, c - length);
     }
 
     public Point upRight() {

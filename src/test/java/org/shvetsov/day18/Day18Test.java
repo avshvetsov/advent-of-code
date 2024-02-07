@@ -1,5 +1,6 @@
 package org.shvetsov.day18;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.shvetsov.InputAnswer;
@@ -11,6 +12,12 @@ import static org.shvetsov.InputAnswer.InputFormat.PATH;
 class Day18Test {
 
     private final Day18 day = new Day18();
+
+    @Test
+    public void hexadecimalParse() {
+        String s = "70c71";
+        assertThat(Long.parseLong(s, 16)).isEqualTo(461937L);
+    }
 
     @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_18_PART_1.+"}, mode = EnumSource.Mode.MATCH_ALL)

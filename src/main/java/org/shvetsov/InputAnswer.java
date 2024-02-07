@@ -54,7 +54,7 @@ public enum InputAnswer {
     DAY_12_PART_1_EXAMPLE("12",1,null, InputType.EXAMPLE, 21L),
     DAY_12_PART_2_EXAMPLE("12",2,null, InputType.EXAMPLE, 525152L),
     DAY_12_PART_1_REAL_ANTON("12",1,"Anton", InputType.REAL, 7843L),
-    DAY_12_PART_2_REAL_ANTON("12",2,"Anton", InputType.REAL, 10153896718999L),
+    DAY_12_PART_2_REAL_ANTON("12",2,"Anton", InputType.REAL, 10_153_896_718_999L),
 //    DAY_12_PART_1_REAL_DANY("12",1,"Dany", InputType.REAL, -1),
 //    DAY_12_PART_2_REAL_DANY("12",2,"Dany", InputType.REAL, -1),
 
@@ -96,7 +96,7 @@ public enum InputAnswer {
     DAY_18_PART_1_EXAMPLE("18",1,null, InputType.EXAMPLE, 62),
     DAY_18_PART_2_EXAMPLE("18",2,null, InputType.EXAMPLE, 952_408_144_115L),
     DAY_18_PART_1_REAL_ANTON("18",1,"Anton", InputType.REAL, 42317),
-    DAY_18_PART_2_REAL_ANTON("18",2,"Anton", InputType.REAL, -1),
+    DAY_18_PART_2_REAL_ANTON("18",2,"Anton", InputType.REAL, 83_605_563_360_288L),
 //    DAY_18_PART_1_REAL_DANY("18",1,"Dany", InputType.REAL, 506891),
 //    DAY_18_PART_2_REAL_DANY("18",2,"Dany", InputType.REAL, 230462),
     ;

@@ -133,6 +133,8 @@ Benchmarks.day17part2Anton  avgt    3  1693,824 ± 3788,144  ms/op
 ```
 ### Day 18
 ```
-Benchmark                   Mode  Cnt  Score   Error  Units
-Benchmarks.day18part1Anton  avgt    3  0,621 ± 0,049  ms/op
+Benchmark                              Mode  Cnt  Score   Error  Units
+Benchmarks.day18part1Anton             avgt    3  0,338 ± 0,065  ms/op
+Benchmarks.day18part1AntonInefficient  avgt    3  0,604 ± 0,034  ms/op
+Benchmarks.day18part2Anton             avgt    3  0,327 ± 0,041  ms/op
 ```

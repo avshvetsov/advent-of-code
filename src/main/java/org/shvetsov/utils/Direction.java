@@ -1,5 +1,7 @@
 package org.shvetsov.utils;
 
+import org.apache.commons.math3.complex.Complex;
+
 public enum Direction {
     NORTH, WEST, SOUTH, EAST;
 
@@ -9,6 +11,15 @@ public enum Direction {
             case WEST -> EAST;
             case SOUTH -> NORTH;
             case EAST -> WEST;
+        };
+    }
+
+    public Complex toComplex() {
+        return switch (this) {
+            case NORTH -> new Complex(0, 1);
+            case WEST -> new Complex(-1, 0);
+            case SOUTH -> new Complex(0, -1);
+            case EAST -> new Complex(1, 0);
         };
     }
 }

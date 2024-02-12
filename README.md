@@ -121,9 +121,11 @@ Benchmarks.day15part2Dany   avgt    3  1,161 ± 0,088  ms/op
 ```
 ### Day 16
 ```
-Benchmark                   Mode  Cnt    Score    Error  Units
-Benchmarks.day16part1Anton  avgt    3    1,804 ±  0,358  ms/op
-Benchmarks.day16part2Anton  avgt    3  332,884 ± 24,859  ms/op
+Benchmark                          Mode  Cnt    Score     Error  Units
+Benchmarks.day16part1Anton         avgt    3    1,976 ±   0,804  ms/op
+Benchmarks.day16part1ComplexAnton  avgt    3    1,910 ±   0,644  ms/op
+Benchmarks.day16part2Anton         avgt    3  350,514 ± 236,664  ms/op
+Benchmarks.day16part2ComplexAnton  avgt    3  348,387 ± 107,887  ms/op
 ```
 ### Day 17
 ```

@@ -104,8 +104,11 @@ public enum InputAnswer {
     DAY_19_PART_2_EXAMPLE("19",2,null, InputType.EXAMPLE, 167409079868000L),
     DAY_19_PART_1_REAL_ANTON("19",1,"Anton", InputType.REAL, 374873L),
     DAY_19_PART_2_REAL_ANTON("19",2,"Anton", InputType.REAL, 122112157518711L),
-//    DAY_18_PART_1_REAL_DANY("19",1,"Dany", InputType.REAL, 506891),
-//    DAY_18_PART_2_REAL_DANY("18",2,"Dany", InputType.REAL, 230462),
+
+    DAY_20_PART_1_EXAMPLE("20",1,null, InputType.EXAMPLE, 19114L),
+    DAY_20_PART_2_EXAMPLE("20",2,null, InputType.EXAMPLE, -1L),
+    DAY_20_PART_1_REAL_ANTON("20",1,"Anton", InputType.REAL, -1),
+    DAY_20_PART_2_REAL_ANTON("20",2,"Anton", InputType.REAL, -1L),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

@@ -18,7 +18,7 @@ class Day19Test {
     @Test
     public void testBitSet() {
         BitSet bs1 = new BitSet(4000);
-        bs1.set(0, 4000);
+        bs1.set(0, 1);
         BitSet bs2 = new BitSet(4000);
         bs2.set(5, 15);
         bs1.and(bs2);         //  {5, 6, 7, 8, 9}

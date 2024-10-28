@@ -1,5 +1,6 @@
 package org.shvetsov.day20;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.shvetsov.InputAnswer;
@@ -10,12 +11,17 @@ import static org.shvetsov.InputAnswer.InputFormat.PATH;
 
 class Day20Test {
 
-    private final Day20 day = new Day20();
+    private Day20 day;
+
+    @BeforeEach
+    public void setup() {
+        day = new Day20();
+    }
 
     @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_20_PART_1.+"}, mode = EnumSource.Mode.MATCH_ALL)
     public void partOneInput(InputAnswer param) {
-        int result = day.partOneAnton(Utils.parseInputByNewLine(param.getInput(PATH)));
+        long result = day.partOneAnton(Utils.parseInputByNewLine(param.getInput(PATH)));
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }

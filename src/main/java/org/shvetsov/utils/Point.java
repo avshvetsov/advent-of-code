@@ -18,7 +18,7 @@ public class Point {
         return new Point(row, column);
     }
 
-    public boolean isIndexExistInArray(char[][] array) {
+    public <T> boolean isIndexExistInArray(T[][] array) {
         return Utils.isIndexExistInArray(array, r, c);
     }
 

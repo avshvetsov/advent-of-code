@@ -53,6 +53,16 @@ public class Utils {
         return true;
     }
 
+    public static <T> boolean isIndexExistInArray(T[][] array, int row, int column) {
+        if (row < 0 || row >= array.length) {
+            return false;
+        }
+        if (column < 0 || column >= array[row].length) {
+            return false;
+        }
+        return true;
+    }
+
     @SneakyThrows
     public static List<String> parseInputByNewLine(String pathToFile) {
         Path path = Paths.get(pathToFile);

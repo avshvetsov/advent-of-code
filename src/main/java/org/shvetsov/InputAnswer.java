@@ -107,9 +107,18 @@ public enum InputAnswer {
 
     DAY_20_PART_1_1_EXAMPLE("20", "1",1,null, InputType.EXAMPLE, 32_000_000L),
     DAY_20_PART_1_2_EXAMPLE("20", "2", 1,null, InputType.EXAMPLE, 11_687_500L),
-//    DAY_20_PART_2_EXAMPLE("20",2,null, InputType.EXAMPLE, -1L),
     DAY_20_PART_1_REAL_ANTON("20",1,"Anton", InputType.REAL, 841_763_884L),
     DAY_20_PART_2_REAL_ANTON("20",2,"Anton", InputType.REAL, 246_006_621_493_687L),
+
+    DAY_21_PART_1_EXAMPLE("21", 1,null, InputType.EXAMPLE, 6, 16L),
+    DAY_21_PART_1_REAL_ANTON("21",1,"Anton", InputType.REAL, 64, 3649L),
+    DAY_21_PART_2_1_EXAMPLE("21", 1,null, InputType.EXAMPLE, 10, 50L),
+    DAY_21_PART_2_2_EXAMPLE("21", 1,null, InputType.EXAMPLE, 50, 1594L),
+    DAY_21_PART_2_3_EXAMPLE("21", 1,null, InputType.EXAMPLE, 100, 6536L),
+    DAY_21_PART_2_4_EXAMPLE("21", 1,null, InputType.EXAMPLE, 500, 167004L),
+    DAY_21_PART_2_5_EXAMPLE("21", 1,null, InputType.EXAMPLE, 1000, 668697L),
+    DAY_21_PART_2_6_EXAMPLE("21", 1,null, InputType.EXAMPLE, 5000, 16733044L),
+    DAY_21_PART_2_REAL_ANTON("21",2,"Anton", InputType.REAL, 26_501_365, -1L),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

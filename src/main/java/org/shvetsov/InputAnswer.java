@@ -112,12 +112,6 @@ public enum InputAnswer {
 
     DAY_21_PART_1_EXAMPLE("21", 1,null, InputType.EXAMPLE, 6, 16L),
     DAY_21_PART_1_REAL_ANTON("21",1,"Anton", InputType.REAL, 64, 3649L),
-    DAY_21_PART_2_1_EXAMPLE("21", 1,null, InputType.EXAMPLE, 10, 50L),
-    DAY_21_PART_2_2_EXAMPLE("21", 1,null, InputType.EXAMPLE, 50, 1594L),
-    DAY_21_PART_2_3_EXAMPLE("21", 1,null, InputType.EXAMPLE, 100, 6536L),
-    DAY_21_PART_2_4_EXAMPLE("21", 1,null, InputType.EXAMPLE, 500, 167004L),
-    DAY_21_PART_2_5_EXAMPLE("21", 1,null, InputType.EXAMPLE, 1000, 668697L),
-    DAY_21_PART_2_6_EXAMPLE("21", 1,null, InputType.EXAMPLE, 5000, 16733044L),
     DAY_21_PART_2_REAL_ANTON("21",2,"Anton", InputType.REAL, 26_501_365, -1L),
     ;
 

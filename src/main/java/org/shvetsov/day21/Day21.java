@@ -75,47 +75,45 @@ public class Day21 {
      * <br>- so, we have 202_300 * 202_300 maps with non-start count (even) and 202_299 * 202_299 maps with start count (odd)
      * <br>- plus we have to count cut corners map: 4 corner with start count + 202_299 * 4 big start + 202_300 * 4 small non-start
      */
-    public long partTwoAnton(List<String> inputList) {
+    public long partTwoAnton(List<String> inputList, int steps) {
+        long mapCount = (steps - 65) / 131;
         char[][] map = buildCharMap(inputList);
-        int plotsInStart = countPlots(map, Point.of(65, 65), 130, false);
-        int plotsInNonStart = countPlots(map, Point.of(65, 65), 130, true);
-        int plotsLeftCorner = countPlots(map, Point.of(65, 130), 130, true);
-        int plotsTopCorner = countPlots(map, Point.of(130, 65), 130, true);
-        int plotsRightCorner = countPlots(map, Point.of(65, 0), 130, true);
-        int plotsBottomCorner = countPlots(map, Point.of(0, 65), 130, true);
-        int bigNWSide = countPlots(map, Point.of(130, 130), 130 + 65, false);
-        int bigNESide = countPlots(map, Point.of(130, 0), 130 + 65, false);
-        int bigSESide = countPlots(map, Point.of(0, 0), 130 + 65, false);
-        int bigSWSide = countPlots(map, Point.of(0, 130), 130 + 65, false);
-        int smallNWSide = countPlots(map, Point.of(130, 130), 64, true);
-        int smallNESide = countPlots(map, Point.of(130, 0), 64, true);
-        int smallSESide = countPlots(map, Point.of(0, 0), 64, true);
-        int smallSWSide = countPlots(map, Point.of(0, 130), 64, true);
-        return 202_300L * 202_300L * plotsInNonStart + 202_299L * 202_299L * plotsInStart +
+        int plotsInStart = countPlots(map, Point.of(65, 65), 131, false);
+        int plotsInNonStart = countPlots(map, Point.of(65, 65), 131, true);
+
+        int plotsLeftCorner = countPlots(map, Point.of(65, 130), 131, true);
+        int plotsTopCorner = countPlots(map, Point.of(130, 65), 131, true);
+        int plotsRightCorner = countPlots(map, Point.of(65, 0), 131, true);
+        int plotsBottomCorner = countPlots(map, Point.of(0, 65), 131, true);
+        int bigNWSide = countPlots(map, Point.of(130, 130), 131 + 65, false);
+        int bigNESide = countPlots(map, Point.of(130, 0), 131 + 65, false);
+        int bigSESide = countPlots(map, Point.of(0, 0), 131 + 65, false);
+        int bigSWSide = countPlots(map, Point.of(0, 130), 131 + 65, false);
+        int smallNWSide = countPlots(map, Point.of(130, 130), 65, true);
+        int smallNESide = countPlots(map, Point.of(130, 0), 65, true);
+        int smallSESide = countPlots(map, Point.of(0, 0), 65, true);
+        int smallSWSide = countPlots(map, Point.of(0, 130), 65, true);
+        return mapCount * mapCount * plotsInNonStart + (mapCount - 1) * (mapCount - 1) * plotsInStart +
                 + plotsLeftCorner + plotsTopCorner + plotsRightCorner + plotsBottomCorner +
-                + 202_299L * bigNWSide + 202_299L * bigNESide + 202_299L * bigSESide + 202_299L * bigSWSide +
-                + 202_300L * smallNWSide + 202_300L * smallNESide + 202_300L * smallSESide + 202_300L * smallSWSide;
-//        int small1 = countPlots(map, Point.of(0, 0), 64, false);
-//        int small2 = countPlots(map, Point.of(130, 0), 64, false);
-//        int small3 = countPlots(map, Point.of(0, 130), 64, false);
-//        int small4 = countPlots(map, Point.of(130, 130), 64, false);
-//        return 202_301L * 202_301L * plotsInStart + 202_300L * 202_300L * plotsInNonStart - small1 - small2 - small3 - small4;
+                + (mapCount - 1) * bigNWSide + (mapCount - 1) * bigNESide + (mapCount - 1) * bigSESide + (mapCount - 1) * bigSWSide +
+                + mapCount * smallNWSide + mapCount * smallNESide + mapCount * smallSESide + mapCount * smallSWSide;
     }
+
 
     private int countPlots(char[][] originMap, Point start, int steps, boolean countStart) {
         char[][] map = copyArray(originMap);
         int result = 0;
         Set<Point> current = new HashSet<>();
         current.add(start);
-        for (int i = 0; i <= steps; i++) {
+        for (int i = 0; i < steps; i++) {
             if (countStart) result += current.size();
             Set<Point> next = new HashSet<>();
             for (Point point : current) {
+                map[point.r][point.c] = '#';
                 for (Direction dir : Direction.values()) {
                     Point potential = point.move(dir);
-                    if (Utils.isIndexExistInArray(map, potential.r, potential.c) && map[potential.r][potential.c] == '.') {
+                    if (Utils.isIndexExistInArray(map, potential.r, potential.c) && (map[potential.r][potential.c] == '.' || map[potential.r][potential.c] == 'S')) {
                         next.add(potential);
-                        map[potential.r][potential.c] = '#';
                     }
                 }
             }

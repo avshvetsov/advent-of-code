@@ -112,7 +112,7 @@ public enum InputAnswer {
 
     DAY_21_PART_1_EXAMPLE("21", 1,null, InputType.EXAMPLE, 6, 16L),
     DAY_21_PART_1_REAL_ANTON("21",1,"Anton", InputType.REAL, 64, 3649L),
-    DAY_21_PART_2_REAL_ANTON("21",2,"Anton", InputType.REAL, 26_501_365, -1L),
+    DAY_21_PART_2_REAL_ANTON("21",2,"Anton", InputType.REAL, 26_501_365, 612_941_134_797_232L),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

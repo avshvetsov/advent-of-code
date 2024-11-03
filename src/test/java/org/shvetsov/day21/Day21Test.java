@@ -30,7 +30,7 @@ class Day21Test {
     @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_21_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
     public void partTwoInput(InputAnswer param) {
-        long result = day.partTwoAnton(Utils.parseInputByNewLine(param.getInput(PATH)));
+        long result = day.partTwoAnton(Utils.parseInputByNewLine(param.getInput(PATH)), (int) param.getAdditionalInput());
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }

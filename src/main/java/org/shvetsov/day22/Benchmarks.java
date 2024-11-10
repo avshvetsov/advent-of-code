@@ -9,6 +9,9 @@ import java.util.concurrent.TimeUnit;
 import static org.shvetsov.InputAnswer.*;
 import static org.shvetsov.InputAnswer.InputFormat.PATH;
 
+//Benchmark                   Mode  Cnt   Score   Error  Units
+//Benchmarks.day22part1Anton  avgt    3   3,972 ± 0,676  ms/op
+//Benchmarks.day22part2Anton  avgt    3  19,498 ± 6,485  ms/op
 
 @BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 3)

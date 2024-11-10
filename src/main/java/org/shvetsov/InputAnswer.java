@@ -115,9 +115,10 @@ public enum InputAnswer {
     DAY_21_PART_2_REAL_ANTON("21",2,"Anton", InputType.REAL, 26_501_365, 612_941_134_797_232L),
 
     DAY_22_PART_1_EXAMPLE("22", 1,null, InputType.EXAMPLE, 5L),
-    DAY_22_PART_2_EXAMPLE("22",  1,null, InputType.EXAMPLE, 7L),
+    DAY_22_PART_2_EXAMPLE("22",  2,null, InputType.EXAMPLE, 7L),
+    DAY_22_PART_2_2_EXAMPLE("22", "2",  2,null, InputType.EXAMPLE, 15L),
     DAY_22_PART_1_REAL_ANTON("22",1,"Anton", InputType.REAL, 471L),
-    DAY_22_PART_2_REAL_ANTON("22",2,"Anton", InputType.REAL, -1),
+    DAY_22_PART_2_REAL_ANTON("22",2,"Anton", InputType.REAL, 68525L),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

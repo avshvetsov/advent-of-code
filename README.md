@@ -171,3 +171,9 @@ Benchmarks.day23part1Anton            ss           30,396          ms/op
 Benchmarks.day23part2Anton            ss       317760,384          ms/op
 Benchmarks.day23part2AntonParallel    ss       525990,049          ms/op
 ```
+### Day 24
+```
+Benchmark                   Mode  Cnt   Score   Error  Units
+Benchmarks.day24part1Anton  avgt    3   1,351 ± 0,342  ms/op
+Benchmarks.day24part2Anton  avgt    3  44,103 ± 1,428  ms/op
+```

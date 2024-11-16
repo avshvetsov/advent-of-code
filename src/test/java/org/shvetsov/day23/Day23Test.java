@@ -1,11 +1,10 @@
-package org.shvetsov.day23.day22;
+package org.shvetsov.day23;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.shvetsov.InputAnswer;
-import org.shvetsov.day23.Day23;
 import org.shvetsov.utils.Utils;
 
 import static org.assertj.core.api.Assertions.assertThat;

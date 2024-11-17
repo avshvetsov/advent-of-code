@@ -122,9 +122,12 @@ public enum InputAnswer {
     DAY_23_PART_2_REAL_ANTON("23", 2, "Anton", InputType.REAL, 6426L),
 
     DAY_24_PART_1_EXAMPLE("24", 1, null, InputType.EXAMPLE, new long[]{7L, 27L}, 2L),
-    DAY_24_PART_2_EXAMPLE("24", 2, null, InputType.EXAMPLE, 47L),
+//    DAY_24_PART_2_EXAMPLE("24", 2, null, InputType.EXAMPLE, 47L),
     DAY_24_PART_1_REAL_ANTON("24", 1, "Anton", InputType.REAL, new long[]{200000000000000L, 400000000000000L}, 25810L),
     DAY_24_PART_2_REAL_ANTON("24", 2, "Anton", InputType.REAL, 652_666_650_475_950L),
+
+    DAY_25_PART_1_EXAMPLE("25", 1, null, InputType.EXAMPLE, 100, 54L),
+    DAY_25_PART_1_REAL_ANTON("25", 1, "Anton", InputType.REAL, 100,562978L),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

@@ -1,5 +1,5 @@
-# Advent of Code 2023
-[adventofcode.com](https://adventofcode.com/)
+# [Advent of Code 2023](https://adventofcode.com/2023)
+
 ## Benchmark Results
 ### Day 1
 ```
@@ -176,4 +176,16 @@ Benchmarks.day23part2AntonParallel    ss       525990,049          ms/op
 Benchmark                   Mode  Cnt   Score   Error  Units
 Benchmarks.day24part1Anton  avgt    3   1,351 ± 0,342  ms/op
 Benchmarks.day24part2Anton  avgt    3  44,103 ± 1,428  ms/op
+```
+### Day 25
+```
+Benchmark                   (monteCarloSize)  Mode  Cnt     Score       Error  Units
+Benchmarks.day25part1Anton                10  avgt    3  1864,413 ± 20418,555  ms/op
+Benchmarks.day25part1Anton                20  avgt    3   130,236 ±   299,858  ms/op
+Benchmarks.day25part1Anton                30  avgt    3    77,209 ±    86,003  ms/op
+Benchmarks.day25part1Anton                50  avgt    3    54,166 ±   102,841  ms/op
+Benchmarks.day25part1Anton               100  avgt    3    68,752 ±    74,801  ms/op
+Benchmarks.day25part1Anton               200  avgt    3   102,288 ±    47,856  ms/op
+Benchmarks.day25part1Anton               500  avgt    3   231,963 ±    51,620  ms/op
+Benchmarks.day25part1Anton              1000  avgt    3   470,189 ±    30,113  ms/op
 ```

@@ -25,10 +25,10 @@ public enum InputAnswer {
     DAY_4_PART_1_REAL_ANTON("4", 1, "Anton", InputType.REAL, 456L),
     DAY_4_PART_2_REAL_ANTON("4", 2, "Anton", InputType.REAL, 808L),
 
-    DAY_5_PART_1_EXAMPLE("5", 1, null, InputType.EXAMPLE, -1L),
-    DAY_5_PART_2_EXAMPLE("5", 2, null, InputType.EXAMPLE, -1L),
-    DAY_5_PART_1_REAL_ANTON("5", 1, "Anton", InputType.REAL, -1L),
-    DAY_5_PART_2_REAL_ANTON("5", 2, "Anton", InputType.REAL, -1L),
+    DAY_5_PART_1_EXAMPLE("5", 1, null, InputType.EXAMPLE, "CMZ"),
+    DAY_5_PART_2_EXAMPLE("5", 2, null, InputType.EXAMPLE, "MCD"),
+    DAY_5_PART_1_REAL_ANTON("5", 1, "Anton", InputType.REAL, "VJSFHWGFT"),
+    DAY_5_PART_2_REAL_ANTON("5", 2, "Anton", InputType.REAL, "LCTQFBVZV"),
 
     DAY_6_PART_1_EXAMPLE("6", 1, null, InputType.EXAMPLE, -1L),
     DAY_6_PART_2_EXAMPLE("6", 2, null, InputType.EXAMPLE, -1L),
@@ -141,9 +141,9 @@ public enum InputAnswer {
     @Getter
     private Object additionalInput = null;
     @Getter
-    private final Number answer;
+    private final Object answer;
 
-    InputAnswer(String day, int part, String user, InputType inputType, Number answer) {
+    InputAnswer(String day, int part, String user, InputType inputType, Object answer) {
         this.day = day;
         this.part = part;
         this.user = user;
@@ -151,7 +151,7 @@ public enum InputAnswer {
         this.answer = answer;
     }
 
-    InputAnswer(String day, String subInputNum, int part, String user, InputType inputType, Number answer) {
+    InputAnswer(String day, String subInputNum, int part, String user, InputType inputType, Object answer) {
         this.day = day;
         this.subInputNum = subInputNum;
         this.part = part;
@@ -160,7 +160,7 @@ public enum InputAnswer {
         this.answer = answer;
     }
 
-    InputAnswer(String day, int part, String user, InputType inputType, Object additionalInput, Number answer) {
+    InputAnswer(String day, int part, String user, InputType inputType, Object additionalInput, Object answer) {
         this.day = day;
         this.part = part;
         this.user = user;

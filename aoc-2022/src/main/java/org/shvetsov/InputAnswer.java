@@ -43,10 +43,10 @@ public enum InputAnswer {
     DAY_6_PART_1_REAL_ANTON("6", 1, "Anton", InputType.REAL, 1175L),
     DAY_6_PART_2_REAL_ANTON("6", 2, "Anton", InputType.REAL, 3217L),
 
-    DAY_7_PART_1_EXAMPLE("7", 1, null, InputType.EXAMPLE, -1L),
-    DAY_7_PART_2_EXAMPLE("7", 2, null, InputType.EXAMPLE, -1L),
-    DAY_7_PART_1_REAL_ANTON("7", 1, "Anton", InputType.REAL, -1L),
-    DAY_7_PART_2_REAL_ANTON("7", 2, "Anton", InputType.REAL, -1L),
+    DAY_7_PART_1_EXAMPLE("7", 1, null, InputType.EXAMPLE, 95437L),
+    DAY_7_PART_2_EXAMPLE("7", 2, null, InputType.EXAMPLE, 24933642L),
+    DAY_7_PART_1_REAL_ANTON("7", 1, "Anton", InputType.REAL, 1611443L),
+    DAY_7_PART_2_REAL_ANTON("7", 2, "Anton", InputType.REAL, 2086088L),
 
     DAY_8_PART_1_EXAMPLE("8", 1, null, InputType.EXAMPLE, -1L),
     DAY_8_PART_2_EXAMPLE("8", 2, null, InputType.EXAMPLE, -1L),

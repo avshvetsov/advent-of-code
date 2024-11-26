@@ -145,6 +145,14 @@ public class Point {
         return this;
     }
 
+    public Point subtract(Point other) {
+        return Point.of(r - other.r, c - other.c);
+    }
+
+    public Point add(Point other) {
+        return Point.of(r + other.r, c + other.c);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

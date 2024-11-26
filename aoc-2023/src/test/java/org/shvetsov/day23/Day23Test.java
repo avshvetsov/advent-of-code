@@ -27,6 +27,7 @@ class Day23Test {
         assertThat(result).isEqualTo(param.getAnswer());
     }
 
+    //run with -Xss4m
     @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_23_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
     public void partTwoInput(InputAnswer param) {

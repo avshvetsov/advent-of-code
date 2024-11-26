@@ -22,6 +22,10 @@ public class Point {
         return Utils.isIndexExistInArray(array, r, c);
     }
 
+    public boolean isIndexExistInArray(int[][] array) {
+        return Utils.isIndexExistInArray(array, r, c);
+    }
+
     public <T> boolean isIndexExistInArray(T[][] array) {
         return Utils.isIndexExistInArray(array, r, c);
     }
@@ -47,13 +51,14 @@ public class Point {
             case WEST -> left(length);
         };
     }
-    public Point moveThis(Direction direction) {
-        return switch (direction) {
+
+    public void moveThis(Direction direction) {
+        switch (direction) {
             case NORTH -> upThis();
             case EAST -> rightThis();
             case SOUTH -> downThis();
             case WEST -> leftThis();
-        };
+        }
     }
 
     public Point up() {
@@ -100,24 +105,20 @@ public class Point {
         return new Point(r - 1, c - 1);
     }
 
-    public Point upThis() {
+    public void upThis() {
         r--;
-        return this;
     }
 
-    public Point downThis() {
+    public void downThis() {
         r++;
-        return this;
     }
 
-    public Point rightThis() {
+    public void rightThis() {
         c++;
-        return this;
     }
 
-    public Point leftThis() {
+    public void leftThis() {
         c--;
-        return this;
     }
 
     public Point upRightThis() {

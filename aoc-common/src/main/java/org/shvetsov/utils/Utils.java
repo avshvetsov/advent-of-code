@@ -44,20 +44,22 @@ public class Utils {
     }
 
     public static boolean isIndexExistInArray(char[][] array, int row, int column) {
-        if (row < 0 || row >= array.length) {
-            return false;
-        }
-        if (column < 0 || column >= array[row].length) {
-            return false;
-        }
-        return true;
+        return isIndexExistInArrayBounds(array.length, array[0].length, row, column);
+    }
+
+    public static boolean isIndexExistInArray(int[][] array, int row, int column) {
+        return isIndexExistInArrayBounds(array.length, array[0].length, row, column);
     }
 
     public static <T> boolean isIndexExistInArray(T[][] array, int row, int column) {
-        if (row < 0 || row >= array.length) {
+        return isIndexExistInArrayBounds(array.length, array[0].length, row, column);
+    }
+
+    private static boolean isIndexExistInArrayBounds(int m, int n, int r, int c) {
+        if (r < 0 || r >= m) {
             return false;
         }
-        if (column < 0 || column >= array[row].length) {
+        if (c < 0 || c >= n) {
             return false;
         }
         return true;

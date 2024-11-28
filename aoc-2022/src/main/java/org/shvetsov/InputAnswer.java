@@ -70,10 +70,10 @@ public enum InputAnswer {
     DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, 113_220L),
     DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, 30_599_555_965L),
 
-    DAY_12_PART_1_EXAMPLE("12", 1, null, InputType.EXAMPLE, -1L),
-    DAY_12_PART_2_EXAMPLE("12", 2, null, InputType.EXAMPLE, -1L),
-    DAY_12_PART_1_REAL_ANTON("12", 1, "Anton", InputType.REAL, -1L),
-    DAY_12_PART_2_REAL_ANTON("12", 2, "Anton", InputType.REAL, -1L),
+    DAY_12_PART_1_EXAMPLE("12", 1, null, InputType.EXAMPLE, 31L),
+    DAY_12_PART_2_EXAMPLE("12", 2, null, InputType.EXAMPLE, 29L),
+    DAY_12_PART_1_REAL_ANTON("12", 1, "Anton", InputType.REAL, 447L),
+    DAY_12_PART_2_REAL_ANTON("12", 2, "Anton", InputType.REAL, 446L),
 
     DAY_13_PART_1_EXAMPLE("13", 1, null, InputType.EXAMPLE, -1L),
     DAY_13_PART_2_EXAMPLE("13", 2, null, InputType.EXAMPLE, -1L),

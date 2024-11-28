@@ -65,10 +65,10 @@ public enum InputAnswer {
     DAY_10_PART_1_REAL_ANTON("10", 1, "Anton", InputType.REAL, 12560L),
     DAY_10_PART_2_REAL_ANTON("10", 2, "Anton", InputType.REAL, Utils.parseInputByNewLine("src/main/resources/day10/result 10-2.txt")),
 
-    DAY_11_PART_1_EXAMPLE("11", 1, null, InputType.EXAMPLE, -1L),
-    DAY_11_PART_2_EXAMPLE("11", 2, null, InputType.EXAMPLE, -1L),
-    DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, -1L),
-    DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, -1L),
+    DAY_11_PART_1_EXAMPLE("11", 1, null, InputType.EXAMPLE, 10_605L),
+    DAY_11_PART_2_EXAMPLE("11", 2, null, InputType.EXAMPLE, 2_713_310_158L),
+    DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, 113_220L),
+    DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, 30_599_555_965L),
 
     DAY_12_PART_1_EXAMPLE("12", 1, null, InputType.EXAMPLE, -1L),
     DAY_12_PART_2_EXAMPLE("12", 2, null, InputType.EXAMPLE, -1L),

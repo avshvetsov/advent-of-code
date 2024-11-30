@@ -10,9 +10,11 @@ import static org.shvetsov.InputAnswer.DAY_13_PART_1_REAL_ANTON;
 import static org.shvetsov.InputAnswer.DAY_13_PART_2_REAL_ANTON;
 import static org.shvetsov.InputAnswer.InputFormat.PATH;
 
-//Benchmark                     Mode  Cnt  Score   Error  Units
-//Benchmarks.day13PartOneAnton  avgt    3  0,911 ± 0,338  ms/op
-//Benchmarks.day13PartTwoAnton  avgt    3  1,173 ± 0,680  ms/op
+//Benchmark                         Mode  Cnt  Score   Error  Units
+//Benchmarks.day13PartOneAntonUgly  avgt    3  1,234 ± 0,163  ms/op
+//Benchmarks.day13PartOneDany       avgt    3  1,333 ± 0,499  ms/op
+//Benchmarks.day13PartTwoAntonUgly  avgt    3  1,612 ± 1,250  ms/op
+//Benchmarks.day13PartTwoDany       avgt    3  1,580 ± 0,407  ms/op
 
 @BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 3)
@@ -22,12 +24,22 @@ import static org.shvetsov.InputAnswer.InputFormat.PATH;
 public class Benchmarks {
 
     @Benchmark
-    public void day13PartOneAnton(Blackhole bh) {
+    public void day13PartOneDany(Blackhole bh) {
         bh.consume(new Day13().partOne(Utils.parseInputByNewLine(DAY_13_PART_1_REAL_ANTON.getInput(PATH))));
     }
 
     @Benchmark
-    public void day13PartTwoAnton(Blackhole bh) {
+    public void day13PartTwoDany(Blackhole bh) {
         bh.consume(new Day13().partTwo(Utils.parseInputByNewLine(DAY_13_PART_2_REAL_ANTON.getInput(PATH))));
+    }
+
+    @Benchmark
+    public void day13PartOneAntonUgly(Blackhole bh) {
+        bh.consume(new Day13Ugly().partOne(Utils.parseInputByNewLine(DAY_13_PART_1_REAL_ANTON.getInput(PATH))));
+    }
+
+    @Benchmark
+    public void day13PartTwoAntonUgly(Blackhole bh) {
+        bh.consume(new Day13Ugly().partTwo(Utils.parseInputByNewLine(DAY_13_PART_2_REAL_ANTON.getInput(PATH))));
     }
 }

@@ -1,7 +1,7 @@
 package org.shvetsov.day9;
 
 import org.shvetsov.utils.Direction;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,9 +14,9 @@ import java.util.Set;
 public class Day9 {
 
     public long partOne(List<String> input) {
-        Point head = Point.of(0, 0);
-        Point tail = Point.of(0, 0);
-        Set<Point> tailPositions = new HashSet<>();
+        PointOld head = PointOld.of(0, 0);
+        PointOld tail = PointOld.of(0, 0);
+        Set<PointOld> tailPositions = new HashSet<>();
         tailPositions.add(tail);
         for (String s : input) {
             String[] split = s.split(" ");
@@ -24,7 +24,7 @@ public class Day9 {
             int x = Integer.parseInt(split[1]);
             while (x > 0) {
                 head.moveThis(direction);
-                Point diff = head.subtract(tail);
+                PointOld diff = head.subtract(tail);
                 if (Math.abs(diff.r) > 1 || Math.abs(diff.c) > 1) {
                     diff.r = Math.abs(diff.r) < 2 ? 0 : diff.r / 2;
                     diff.c = Math.abs(diff.c) < 2 ? 0 : diff.c / 2;
@@ -50,11 +50,11 @@ public class Day9 {
 
 
     public long partTwo(List<String> input) {
-        List<Point> rope = new ArrayList<>();
+        List<PointOld> rope = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            rope.add(Point.of(0, 0));
+            rope.add(PointOld.of(0, 0));
         }
-        Set<Point> tailPositions = new HashSet<>();
+        Set<PointOld> tailPositions = new HashSet<>();
         tailPositions.add(rope.getLast());
         for (String s : input) {
             String[] split = s.split(" ");
@@ -64,7 +64,7 @@ public class Day9 {
                 int i = 1;
                 rope.getFirst().moveThis(direction);
                 while (i < rope.size()) {
-                    Point diff = rope.get(i - 1).subtract(rope.get(i));
+                    PointOld diff = rope.get(i - 1).subtract(rope.get(i));
                     if (Math.abs(diff.r) > 1 || Math.abs(diff.c) > 1) {
                         diff.r = Math.abs(diff.r) < 2 ? 0 : diff.r / 2;
                         diff.c = Math.abs(diff.c) < 2 ? 0 : diff.c / 2;

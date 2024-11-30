@@ -1,7 +1,7 @@
 package org.shvetsov.day23;
 
 import org.shvetsov.utils.Direction;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
@@ -11,11 +11,11 @@ import java.util.concurrent.ForkJoinPool;
  */
 public class Day23 {
 
-    private static final Point START = Point.of(0, 1);
+    private static final PointOld START = PointOld.of(0, 1);
 
     public long partOneAnton(List<String> inputList) {
         char[][] map = buildMap(inputList);
-        Point END = Point.of(map.length - 1, map[0].length - 2);
+        PointOld END = PointOld.of(map.length - 1, map[0].length - 2);
         return dfsBacktracking(map, START, END);
     }
 
@@ -27,7 +27,7 @@ public class Day23 {
         return map;
     }
 
-    private int dfsBacktracking(char[][] map, Point current, Point end) {
+    private int dfsBacktracking(char[][] map, PointOld current, PointOld end) {
         if (current.equals(end)) {
             return 0;
         }
@@ -35,7 +35,7 @@ public class Day23 {
         char currentSymbol = map[current.r][current.c];
         map[current.r][current.c] = '#';
         for (Direction dir : Direction.values()) {
-            Point next = current.move(dir);
+            PointOld next = current.move(dir);
             if (next.isIndexExistInArray(map) && isItPossibleStep(map, dir, next)) {
                 int nextPathLength = dfsBacktracking(map, next, end);
                 if (nextPathLength >= 0) {
@@ -48,7 +48,7 @@ public class Day23 {
         return longestPathSize;
     }
 
-    private boolean isItPossibleStep(char[][] map, Direction dir, Point next) {
+    private boolean isItPossibleStep(char[][] map, Direction dir, PointOld next) {
         return switch (map[next.r][next.c]) {
             case '#' -> false;
             case '.' -> true;
@@ -62,11 +62,11 @@ public class Day23 {
     //run with -Xss4m
     public long partTwoAnton(List<String> inputList) {
         char[][] map = buildMap(inputList);
-        Point END = Point.of(map.length - 1, map[0].length - 2);
+        PointOld END = PointOld.of(map.length - 1, map[0].length - 2);
         return dfsBacktracking2(map, START, END);
     }
 
-    private int dfsBacktracking2(char[][] map, Point current, Point end) {
+    private int dfsBacktracking2(char[][] map, PointOld current, PointOld end) {
         if (current.equals(end)) {
             return 0;
         }
@@ -74,7 +74,7 @@ public class Day23 {
         char currentSymbol = map[current.r][current.c];
         map[current.r][current.c] = '#';
         for (Direction dir : Direction.values()) {
-            Point next = current.move(dir);
+            PointOld next = current.move(dir);
             if (next.isIndexExistInArray(map) && map[next.r][next.c] != '#') {
                 int nextPathLength = dfsBacktracking2(map, next, end);
                 if (nextPathLength >= 0) {
@@ -91,7 +91,7 @@ public class Day23 {
     //This way is not faster, cause it required to create map copy for each fork
     public long partTwoAntonParallel(List<String> inputList) {
         char[][] map = buildMap(inputList);
-        Point END = Point.of(map.length - 1, map[0].length - 2);
+        PointOld END = PointOld.of(map.length - 1, map[0].length - 2);
 
         ForkJoinPool pool = new ForkJoinPool();
         ParallelComputation task = new ParallelComputation(map, START, END);

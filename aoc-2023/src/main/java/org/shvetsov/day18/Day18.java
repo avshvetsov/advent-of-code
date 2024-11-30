@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 import org.shvetsov.utils.Direction;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public class Day18 {
     public int partOneAnton(List<String> inputList) {
         int area = 0;
         int border = 0;
-        Point point = Point.of(0, 1);
+        PointOld point = PointOld.of(0, 1);
         for (int i = 0; i < inputList.size(); i++) {
             String[] split = inputList.get(i).split(" ");
             Direction direction = getDirection(split[0].charAt(0));
@@ -48,8 +48,8 @@ public class Day18 {
     public long partTwoAnton(List<String> inputList) {
         long area = 0L;
         long border = 0L;
-        Point point = Point.of(0, 0);
-        List<Point> points = new ArrayList<>();
+        PointOld point = PointOld.of(0, 0);
+        List<PointOld> points = new ArrayList<>();
         for (int i = 0; i < inputList.size(); i++) {
             String hexadecimal = StringUtils.substringBetween(inputList.get(i), "(#", ")");
             Direction direction = getDirection(hexadecimal.charAt(5));
@@ -96,7 +96,7 @@ public class Day18 {
                         DigCube last = this.edges.getLast();
                         last.setSign(d);
                         this.edges.add(new DigCube(last.getPoint().move(d), d, c));
-                    } else this.edges.add(new DigCube(Point.of(0, 0), d, c));
+                    } else this.edges.add(new DigCube(PointOld.of(0, 0), d, c));
                 }
             }
             this.edges.getLast().setSign(this.edges.getFirst().getDirection());
@@ -145,12 +145,12 @@ public class Day18 {
         @Data
         private static class DigCube {
 
-            private Point point;
+            private PointOld point;
             private Direction direction;
             private Character sign;
             private String color;
 
-            public DigCube(Point point, Direction direction, String color) {
+            public DigCube(PointOld point, Direction direction, String color) {
                 this.point = point;
                 this.direction = direction;
                 this.color = color;

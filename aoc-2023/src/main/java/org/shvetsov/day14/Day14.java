@@ -3,7 +3,7 @@ package org.shvetsov.day14;
 import lombok.EqualsAndHashCode;
 import org.shvetsov.utils.Direction;
 import org.shvetsov.utils.Grid;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 import org.shvetsov.utils.Utils;
 
 import java.util.HashMap;
@@ -87,7 +87,7 @@ public class Day14 {
                         for (int j = 0; j < sizeRow(); j++) {
                             switch (getValue(j, i)) {
                                 case 'O' -> {
-                                    swap(Point.of(j, i), Point.of(lastWall + 1, i));
+                                    swap(PointOld.of(j, i), PointOld.of(lastWall + 1, i));
                                     lastWall++;
                                 }
                                 case '#' -> lastWall = j;
@@ -101,7 +101,7 @@ public class Day14 {
                         for (int j = 0; j < sizeColumn(); j++) {
                             switch (getValue(i, j)) {
                                 case 'O' -> {
-                                    swap(Point.of(i, j), Point.of(i, lastWall + 1));
+                                    swap(PointOld.of(i, j), PointOld.of(i, lastWall + 1));
                                     lastWall++;
                                 }
                                 case '#' -> lastWall = j;
@@ -115,7 +115,7 @@ public class Day14 {
                         for (int j = sizeRow() - 1; j >= 0; j--) {
                             switch (getValue(j, i)) {
                                 case 'O' -> {
-                                    swap(Point.of(j, i), Point.of(lastWall - 1, i));
+                                    swap(PointOld.of(j, i), PointOld.of(lastWall - 1, i));
                                     lastWall--;
                                 }
                                 case '#' -> lastWall = j;
@@ -129,7 +129,7 @@ public class Day14 {
                         for (int j = sizeColumn() - 1; j >= 0; j--) {
                             switch (getValue(i, j)) {
                                 case 'O' -> {
-                                    swap(Point.of(i, j), Point.of(i, lastWall - 1));
+                                    swap(PointOld.of(i, j), PointOld.of(i, lastWall - 1));
                                     lastWall--;
                                 }
                                 case '#' -> lastWall = j;

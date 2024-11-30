@@ -2,7 +2,7 @@ package org.shvetsov.day21;
 
 import org.apache.commons.lang3.StringUtils;
 import org.shvetsov.utils.Direction;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 import org.shvetsov.utils.Utils;
 
 import java.util.Arrays;
@@ -17,11 +17,11 @@ public class Day21 {
 
     public long partOneAnton(List<String> inputList, int steps) {
         String[][] map = buildMap(inputList);
-        Set<Point> current = new HashSet<>();
+        Set<PointOld> current = new HashSet<>();
         current.add(findSymbol(map, "S"));
         for (int i = 0; i <= steps; i++) {
-            Set<Point> next = new HashSet<>();
-            for (Point point : current) {
+            Set<PointOld> next = new HashSet<>();
+            for (PointOld point : current) {
                 map[point.r][point.c] = String.valueOf(i);
                 next.addAll(expand(map, point));
             }
@@ -39,10 +39,10 @@ public class Day21 {
         return result;
     }
 
-    private Set<Point> expand(String[][] map, Point point) {
-        Set<Point> next = new HashSet<>();
+    private Set<PointOld> expand(String[][] map, PointOld point) {
+        Set<PointOld> next = new HashSet<>();
         for (Direction direction : Direction.values()) {
-            Point potential = point.move(direction);
+            PointOld potential = point.move(direction);
             if (potential.isIndexExistInArray(map) && map[potential.r][potential.c].equals(".")) {
                 next.add(potential);
             }
@@ -50,11 +50,11 @@ public class Day21 {
         return next;
     }
 
-    private Point findSymbol(String[][] map, String target) {
+    private PointOld findSymbol(String[][] map, String target) {
         for (int i = 0; i < map.length; i++) {
             String[] row = map[i];
             for (int j = 0; j < row.length; j++) {
-                if (row[j].equals(target)) return Point.of(i, j);
+                if (row[j].equals(target)) return PointOld.of(i, j);
             }
         }
         throw new IllegalStateException("Symbol not find");
@@ -81,21 +81,21 @@ public class Day21 {
     public long partTwoAnton(List<String> inputList, int steps) {
         long mapCount = (steps - 65) / 131;
         char[][] map = buildCharMap(inputList);
-        int plotsInStart = countPlots(map, Point.of(65, 65), 131, false);
-        int plotsInNonStart = countPlots(map, Point.of(65, 65), 131, true);
+        int plotsInStart = countPlots(map, PointOld.of(65, 65), 131, false);
+        int plotsInNonStart = countPlots(map, PointOld.of(65, 65), 131, true);
 
-        int plotsLeftCorner = countPlots(map, Point.of(65, 130), 131, true);
-        int plotsTopCorner = countPlots(map, Point.of(130, 65), 131, true);
-        int plotsRightCorner = countPlots(map, Point.of(65, 0), 131, true);
-        int plotsBottomCorner = countPlots(map, Point.of(0, 65), 131, true);
-        int bigNWSide = countPlots(map, Point.of(130, 130), 131 + 65, false);
-        int bigNESide = countPlots(map, Point.of(130, 0), 131 + 65, false);
-        int bigSESide = countPlots(map, Point.of(0, 0), 131 + 65, false);
-        int bigSWSide = countPlots(map, Point.of(0, 130), 131 + 65, false);
-        int smallNWSide = countPlots(map, Point.of(130, 130), 65, true);
-        int smallNESide = countPlots(map, Point.of(130, 0), 65, true);
-        int smallSESide = countPlots(map, Point.of(0, 0), 65, true);
-        int smallSWSide = countPlots(map, Point.of(0, 130), 65, true);
+        int plotsLeftCorner = countPlots(map, PointOld.of(65, 130), 131, true);
+        int plotsTopCorner = countPlots(map, PointOld.of(130, 65), 131, true);
+        int plotsRightCorner = countPlots(map, PointOld.of(65, 0), 131, true);
+        int plotsBottomCorner = countPlots(map, PointOld.of(0, 65), 131, true);
+        int bigNWSide = countPlots(map, PointOld.of(130, 130), 131 + 65, false);
+        int bigNESide = countPlots(map, PointOld.of(130, 0), 131 + 65, false);
+        int bigSESide = countPlots(map, PointOld.of(0, 0), 131 + 65, false);
+        int bigSWSide = countPlots(map, PointOld.of(0, 130), 131 + 65, false);
+        int smallNWSide = countPlots(map, PointOld.of(130, 130), 65, true);
+        int smallNESide = countPlots(map, PointOld.of(130, 0), 65, true);
+        int smallSESide = countPlots(map, PointOld.of(0, 0), 65, true);
+        int smallSWSide = countPlots(map, PointOld.of(0, 130), 65, true);
         return mapCount * mapCount * plotsInNonStart + (mapCount - 1) * (mapCount - 1) * plotsInStart +
                 + plotsLeftCorner + plotsTopCorner + plotsRightCorner + plotsBottomCorner +
                 + (mapCount - 1) * bigNWSide + (mapCount - 1) * bigNESide + (mapCount - 1) * bigSESide + (mapCount - 1) * bigSWSide +
@@ -103,18 +103,18 @@ public class Day21 {
     }
 
 
-    private int countPlots(char[][] originMap, Point start, int steps, boolean countStart) {
+    private int countPlots(char[][] originMap, PointOld start, int steps, boolean countStart) {
         char[][] map = copyArray(originMap);
         int result = 0;
-        Set<Point> current = new HashSet<>();
+        Set<PointOld> current = new HashSet<>();
         current.add(start);
         for (int i = 0; i < steps; i++) {
             if (countStart) result += current.size();
-            Set<Point> next = new HashSet<>();
-            for (Point point : current) {
+            Set<PointOld> next = new HashSet<>();
+            for (PointOld point : current) {
                 map[point.r][point.c] = '#';
                 for (Direction dir : Direction.values()) {
-                    Point potential = point.move(dir);
+                    PointOld potential = point.move(dir);
                     if (Utils.isIndexExistInArray(map, potential.r, potential.c) && (map[potential.r][potential.c] == '.' || map[potential.r][potential.c] == 'S')) {
                         next.add(potential);
                     }

@@ -3,7 +3,7 @@ package org.shvetsov.day17;
 import com.google.common.primitives.Chars;
 import org.shvetsov.utils.Direction;
 import org.shvetsov.utils.Grid;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.*;
 
@@ -18,16 +18,16 @@ public class Day17 {
 
     public int partOneAnton(List<String> inputList) {
         TrafficMap trafficMap = TrafficMap.ofCityBlock(inputList);
-        Point start = Point.of(0, 0);
-        Point end = Point.of(trafficMap.sizeRow() - 1, trafficMap.sizeColumn() - 1);
+        PointOld start = PointOld.of(0, 0);
+        PointOld end = PointOld.of(trafficMap.sizeRow() - 1, trafficMap.sizeColumn() - 1);
         trafficMap.dijkstra(start, end, 1);
         return trafficMap.getValue(end).getMinHeatLossFromStart();
     }
 
     public int partTwoAnton(List<String> inputList) {
         TrafficMap trafficMap = TrafficMap.ofCityBlock(inputList);
-        Point start = Point.of(0, 0);
-        Point end = Point.of(trafficMap.sizeRow() - 1, trafficMap.sizeColumn() - 1);
+        PointOld start = PointOld.of(0, 0);
+        PointOld end = PointOld.of(trafficMap.sizeRow() - 1, trafficMap.sizeColumn() - 1);
         trafficMap.dijkstra(start, end, 2);
         return trafficMap.getValue(end).getMinHeatLossFromStart();
     }
@@ -62,7 +62,7 @@ public class Day17 {
             }
         }
 
-        public void dijkstra(Point start, Point end, int part) {
+        public void dijkstra(PointOld start, PointOld end, int part) {
             //Ноды состоят из Key, minHeatLossFromStart, prevNode
             //Key состоит из Point, Direction, к-ва шагов в одном направлении
             //Генерируем первые 2 Ноды и добавляем их в очередь
@@ -96,7 +96,7 @@ public class Day17 {
                     continue;
                 } else visited.add(current);
 
-                Point currentPoint = current.getKey().point();
+                PointOld currentPoint = current.getKey().point();
 
                 if (part == 2) {
                     if (current.getKey().line() >= 4) {

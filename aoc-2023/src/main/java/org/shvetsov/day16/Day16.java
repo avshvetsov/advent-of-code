@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.shvetsov.utils.Direction;
 import org.shvetsov.utils.Grid;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 import org.shvetsov.utils.Utils;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class Day16 {
 
     public long partOneAnton(List<String> inputList) {
         Contraption contraption = Contraption.ofCharacter(inputList);
-        Pair<Point, Direction> start = Pair.of(Point.of(0, 0), Direction.EAST);
+        Pair<PointOld, Direction> start = Pair.of(PointOld.of(0, 0), Direction.EAST);
         contraption.traceLight(start);
         return contraption.getEnergized().stream()
                 .map(Pair::getLeft)
@@ -34,30 +34,30 @@ public class Day16 {
     public long partTwoAnton(List<String> inputList) {
         Contraption contraption = Contraption.ofCharacter(inputList);
 
-        List<Pair<Point, Direction>> startPoints = new ArrayList<>();
-        Point point = Point.of(0, 0);
+        List<Pair<PointOld, Direction>> startPoints = new ArrayList<>();
+        PointOld point = PointOld.of(0, 0);
         do {
             startPoints.add(Pair.of(point, Direction.SOUTH));
             point = point.right();
         } while (contraption.isContainPoint(point));
-        point = Point.of(0, contraption.sizeColumn() - 1);
+        point = PointOld.of(0, contraption.sizeColumn() - 1);
         do {
             startPoints.add(Pair.of(point, Direction.WEST));
             point = point.down();
         } while (contraption.isContainPoint(point));
-        point = Point.of(contraption.sizeRow() - 1, contraption.sizeColumn() - 1);
+        point = PointOld.of(contraption.sizeRow() - 1, contraption.sizeColumn() - 1);
         do {
             startPoints.add(Pair.of(point, Direction.NORTH));
             point = point.left();
         } while (contraption.isContainPoint(point));
-        point = Point.of(contraption.sizeRow() - 1, 0);
+        point = PointOld.of(contraption.sizeRow() - 1, 0);
         do {
             startPoints.add(Pair.of(point, Direction.EAST));
             point = point.up();
         } while (contraption.isContainPoint(point));
 
         List<Long> results = new ArrayList<>();
-        for (Pair<Point, Direction> start : startPoints) {
+        for (Pair<PointOld, Direction> start : startPoints) {
             contraption.clearRoute();
             contraption.traceLight(start);
             results.add(contraption.getEnergized().stream()
@@ -72,7 +72,7 @@ public class Day16 {
     @Getter
     public static class Contraption extends Grid<Character> {
 
-        private final Set<Pair<Point, Direction>> energized = new HashSet<>();
+        private final Set<Pair<PointOld, Direction>> energized = new HashSet<>();
 
         private static final Set<Character> MIRRORS = Set.of('/', '\\');
         private static final Set<Character> SPLITTERS = Set.of('|', '-');
@@ -89,8 +89,8 @@ public class Day16 {
             energized.clear();
         }
 
-        public void traceLight(Pair<Point, Direction> pointDirection) {
-            Point currentPoint = pointDirection.getLeft();
+        public void traceLight(Pair<PointOld, Direction> pointDirection) {
+            PointOld currentPoint = pointDirection.getLeft();
             Direction currentDirection = pointDirection.getRight();
 
             if (!isContainPoint(currentPoint)) {

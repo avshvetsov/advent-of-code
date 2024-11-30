@@ -1,7 +1,7 @@
 package org.shvetsov.day8;
 
 import org.shvetsov.utils.Direction;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.List;
 
@@ -97,7 +97,7 @@ public class Day8 {
         long result = 1;
         for (Direction direction : Direction.values()) {
             int view = 0;
-            Point current = Point.of(i, j);
+            PointOld current = PointOld.of(i, j);
             current.moveThis(direction);
             while (current.isIndexExistInArray(forest)) {
                 view++;

@@ -3,7 +3,7 @@ package org.shvetsov.day17;
 import lombok.Getter;
 import org.shvetsov.utils.Direction;
 import org.shvetsov.utils.Grid;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public class Node implements Comparable<Node> {
 
     public Node buildNewNode(Grid<CityBlock> grid, Direction direction) {
         Integer line = key.direction() != null && key.direction().equals(direction) ? key.line() + 1 : 1;
-        Point point = key.point().move(direction);
+        PointOld point = key.point().move(direction);
         return new Node(new Key(point, direction, line), minHeatLossFromStart + grid.getValue(point).getHeatLoss(), this);
     }
 

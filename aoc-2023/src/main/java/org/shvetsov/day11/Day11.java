@@ -3,7 +3,7 @@ package org.shvetsov.day11;
 import one.util.streamex.EntryStream;
 import one.util.streamex.StreamEx;
 import org.shvetsov.utils.Grid;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 import org.shvetsov.utils.Utils;
 
 import java.math.BigInteger;
@@ -26,12 +26,12 @@ public class Day11 {
     public long partOneAnton(List<String> inputList) {
         Universe universe = Universe.ofCharacter(inputList);
         universe.expand();
-        List<Point> list = EntryStream.of(universe.getPointMap())
+        List<PointOld> list = EntryStream.of(universe.getPointMap())
                 .filter(entry -> entry.getValue() == '#')
                 .map(Map.Entry::getKey)
                 .toList();
 
-        return StreamEx.ofPairs(list, Point::distance)
+        return StreamEx.ofPairs(list, PointOld::distance)
                 .mapToInt(value -> value)
                 .sum();
 
@@ -72,7 +72,7 @@ public class Day11 {
 
         private BigInteger galaxiesDistance(Integer multiplier) {
             Integer additionalRowMultiplier = multiplier - 1;
-            List<Point> galaxies = EntryStream.of(getPointMap())
+            List<PointOld> galaxies = EntryStream.of(getPointMap())
                     .filter(entry -> entry.getValue() == '#')
                     .map(Map.Entry::getKey)
                     .toList();
@@ -93,7 +93,7 @@ public class Day11 {
             for (int i = 0; i < sizeRow(); i++) {
                 boolean emptyRow = true;
                 for (int j = 0; j < sizeColumn(); j++) {
-                    if (getValue(Point.of(i, j)) != '.') {
+                    if (getValue(PointOld.of(i, j)) != '.') {
                         emptyRow = false;
                         break;
                     }
@@ -106,7 +106,7 @@ public class Day11 {
             for (int i = 0; i < sizeColumn(); i++) {
                 boolean emptyColumn = true;
                 for (int j = 0; j < sizeRow(); j++) {
-                    if (getValue(Point.of(j, i)) != '.') {
+                    if (getValue(PointOld.of(j, i)) != '.') {
                         emptyColumn = false;
                         break;
                     }

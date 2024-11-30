@@ -77,7 +77,7 @@ public class Grid<T> {
         return elements.get(index).size();
     }
 
-    public T getValue(Point point) {
+    public T getValue(PointOld point) {
         return this.elements.get(point.r).get(point.c);
     }
 
@@ -85,7 +85,7 @@ public class Grid<T> {
         return this.elements.get(row).get(col);
     }
 
-    public void setValue(Point point, T value) {
+    public void setValue(PointOld point, T value) {
         this.elements.get(point.r).set(point.c, value);
     }
 
@@ -93,31 +93,31 @@ public class Grid<T> {
         this.elements.get(row).set(col, value);
     }
 
-    public Optional<Point> getPoint(Point point) {
+    public Optional<PointOld> getPoint(PointOld point) {
         return  (point.c >= 0 && point.c < sizeColumn() && point.r >= 0 && point.r < sizeRow()) ? Optional.of(point) : Optional.empty();
     }
 
-    public boolean isContainPoint(Point point) {
+    public boolean isContainPoint(PointOld point) {
         return getPoint(point).isPresent();
     }
 
-    public Map<Point, T> getPointMap() {
+    public Map<PointOld, T> getPointMap() {
         return getAllPoints().stream().collect(Collectors.toMap(Function.identity(), this::getValue));
     }
 
-    public List<Point> getAllPoints() {
+    public List<PointOld> getAllPoints() {
         return IntStream.range(0, sizeRow())
-                .mapToObj(row -> IntStream.range(0, sizeColumn()).mapToObj(col -> Point.of(row, col)).collect(Collectors.toList())).flatMap(List::stream)
+                .mapToObj(row -> IntStream.range(0, sizeColumn()).mapToObj(col -> PointOld.of(row, col)).collect(Collectors.toList())).flatMap(List::stream)
                 .collect(Collectors.toList());
     }
 
-    public void swap(Point point1, Point point2) {
+    public void swap(PointOld point1, PointOld point2) {
         T temp = getValue(point1);
         setValue(point1, getValue(point2));
         setValue(point2, temp);
     }
 
-    public List<T> getNeighbourValues(Point point) {
+    public List<T> getNeighbourValues(PointOld point) {
         return EnumSet.allOf(Direction.class).stream()
                 .map(point::move)
                 .filter(this::isContainPoint)
@@ -125,14 +125,14 @@ public class Grid<T> {
                 .collect(Collectors.toList());
     }
 
-    public List<Point> getNeighbourPoints(Point point) {
+    public List<PointOld> getNeighbourPoints(PointOld point) {
         return EnumSet.allOf(Direction.class).stream()
                 .map(point::move)
                 .filter(this::isContainPoint)
                 .collect(Collectors.toList());
     }
 
-    public List<Direction> getNeighbourDirections(Point point) {
+    public List<Direction> getNeighbourDirections(PointOld point) {
         return EnumSet.allOf(Direction.class).stream()
                 .filter(direction -> isContainPoint(point.move(direction)))
                 .collect(Collectors.toList());

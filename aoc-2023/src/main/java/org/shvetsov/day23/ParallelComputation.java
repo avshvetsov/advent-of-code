@@ -1,7 +1,7 @@
 package org.shvetsov.day23;
 
 import org.shvetsov.utils.Direction;
-import org.shvetsov.utils.Point;
+import org.shvetsov.utils.PointOld;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +12,10 @@ import java.util.concurrent.RecursiveTask;
 public class ParallelComputation extends RecursiveTask<Integer> {
 
     private final char[][] map;
-    private final Point start;
-    private final Point end;
+    private final PointOld start;
+    private final PointOld end;
 
-    public ParallelComputation(char[][] map, Point start, Point end) {
+    public ParallelComputation(char[][] map, PointOld start, PointOld end) {
 //        this.map = copyMap(map);
         this.map = map;
         this.start = start;
@@ -25,11 +25,11 @@ public class ParallelComputation extends RecursiveTask<Integer> {
     @Override
     protected Integer compute() {
         int currentPathSize = 0;
-        List<Point> nextPoints = new ArrayList<>();
+        List<PointOld> nextPoints = new ArrayList<>();
         nextPoints.add(start);
         do {
             currentPathSize++;
-            Point current = nextPoints.getFirst();
+            PointOld current = nextPoints.getFirst();
             map[current.r][current.c] = '#';
             if (current.equals(end)) {
                 return currentPathSize;
@@ -52,10 +52,10 @@ public class ParallelComputation extends RecursiveTask<Integer> {
         }
     }
 
-    private List<Point> findNext(Point current) {
-        List<Point> nextPoints = new ArrayList<>();
+    private List<PointOld> findNext(PointOld current) {
+        List<PointOld> nextPoints = new ArrayList<>();
         for (Direction dir : Direction.values()) {
-            Point potentialNext = current.move(dir);
+            PointOld potentialNext = current.move(dir);
             if (potentialNext.isIndexExistInArray(map) && map[potentialNext.r][potentialNext.c] != '#') {
                 nextPoints.add(potentialNext);
             }
@@ -63,10 +63,10 @@ public class ParallelComputation extends RecursiveTask<Integer> {
         return nextPoints;
     }
 
-    private List<ParallelComputation> split(List<Point> nexts) {
+    private List<ParallelComputation> split(List<PointOld> nexts) {
         List<ParallelComputation> dividedTasks = new ArrayList<>();
         for (int i = 0; i < nexts.size(); i++) {
-            Point next = nexts.get(i);
+            PointOld next = nexts.get(i);
             if (i == 0) {
                 dividedTasks.add(new ParallelComputation(map, next, end));
             } else {

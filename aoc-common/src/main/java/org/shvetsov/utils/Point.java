@@ -5,6 +5,7 @@ public record Point(int r, int c) {
     public Point withR(int r) {
         return new Point(r, c());
     }
+
     public Point withC(int c) {
         return new Point(r(), c);
     }
@@ -27,12 +28,57 @@ public record Point(int r, int c) {
 
     public Point move(Direction direction) {
         return switch (direction) {
-            case NORTH -> withR(r() - 1);
-            case EAST -> withC(c() + 1);
-            case SOUTH -> withR(r() + 1);
-            case WEST -> withC(c() - 1);
+            case NORTH -> up();
+            case EAST -> right();
+            case SOUTH -> down();
+            case WEST -> left();
         };
     }
+
+    public Point up() {
+        return up(1);
+    }
+    public Point up(int steps) {
+        return this.withR(r - steps);
+    }
+
+    public Point down() {
+        return down(1);
+    }
+    public Point down(int steps) {
+        return this.withR(r + steps);
+    }
+
+    public Point right() {
+        return right(1);
+    }
+    public Point right(int steps) {
+        return this.withC(c + steps);
+    }
+
+    public Point left() {
+        return left(1);
+    }
+    public Point left(int steps) {
+        return this.withC(c - steps);
+    }
+
+    public Point upRight() {
+        return new Point(r - 1, c + 1);
+    }
+
+    public Point downRight() {
+        return new Point(r + 1, c + 1);
+    }
+
+    public Point downLeft() {
+        return new Point(r + 1, c - 1);
+    }
+
+    public Point upLeft() {
+        return new Point(r - 1, c - 1);
+    }
+
 
 
     public Point subtract(Point other) {

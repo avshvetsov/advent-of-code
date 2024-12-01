@@ -83,7 +83,9 @@ Benchmarks.day13PartTwoDany       avgt    3  1,580 ± 0,407  ms/op
 ```
 ### Day 14
 ```
-
+Benchmark                     Mode  Cnt   Score   Error  Units
+Benchmarks.day14PartOneAnton  avgt    3   2,643 ± 5,029  ms/op
+Benchmarks.day14PartTwoAnton  avgt    3  26,862 ± 7,015  ms/op
 ```
 ### Day 15
 ```

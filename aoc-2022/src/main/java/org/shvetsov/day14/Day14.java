@@ -36,13 +36,13 @@ public class Day14 {
         Point current = start;
         while (current.isIndexExistInArray(cave)) {
             if (current.r() + 1 >= cave.length) {
-                current = current.withR(current.r() + 1);
+                current = current.down();
             } else if (cave[current.r() + 1][current.c()] == '.') {
-                current = current.withR(current.r() + 1);
+                current = current.down();
             } else if (cave[current.r() + 1][current.c() - 1] == '.') {
-                current = new Point(current.r() + 1, current.c() - 1);
+                current = current.downLeft();
             } else if (cave[current.r() + 1][current.c() + 1] == '.') {
-                current = new Point(current.r() + 1, current.c() + 1);
+                current = current.downRight();
             } else {
                 break;
             }
@@ -78,8 +78,31 @@ public class Day14 {
 
 
     public long partTwo(List<String> input) {
-
-        return 0;
+        int maxRow = input.stream()
+                .flatMap(s -> Arrays.stream(s.split(" -> ")))
+                .map(p -> p.split(",")[1])
+                .mapToInt(Integer::parseInt)
+                .max().orElse(0);
+        char[][] cave = new char[maxRow + 3][1000];
+        for (int i = 0; i < cave.length; i++) {
+            char[] row = cave[i];
+            if (i == maxRow + 2) {
+                Arrays.fill(row, '#');
+            } else {
+                Arrays.fill(row, '.');
+            }
+        }
+        for (String s : input) {
+            addRockToCave(cave, s);
+        }
+        long sandCount = 0;
+        Point position;
+        do {
+            position = dropSand(cave, new Point(0, 500));
+            cave[position.r()][position.c()] = 'o';
+            sandCount++;
+        } while (!position.equals(new Point(0, 500)));
+        return sandCount;
     }
 
 }

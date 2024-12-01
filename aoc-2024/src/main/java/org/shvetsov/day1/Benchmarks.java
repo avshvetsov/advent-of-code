@@ -10,6 +10,9 @@ import static org.shvetsov.InputAnswer.DAY_1_PART_1_REAL_ANTON;
 import static org.shvetsov.InputAnswer.DAY_1_PART_2_REAL_ANTON;
 import static org.shvetsov.InputAnswer.InputFormat.PATH;
 
+//Benchmark                    Mode  Cnt  Score   Error  Units
+//Benchmarks.day1PartOneAnton  avgt    3  1,323 ± 3,765  ms/op
+//Benchmarks.day1PartTwoAnton  avgt    3  1,252 ± 0,213  ms/op
 
 @BenchmarkMode({Mode.AverageTime})
 @Warmup(iterations = 2, time = 5)

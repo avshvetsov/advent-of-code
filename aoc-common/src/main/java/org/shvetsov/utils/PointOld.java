@@ -61,6 +61,11 @@ public class PointOld {
         }
     }
 
+    public void moveThis(int[] direction) {
+        r += direction[0];
+        c += direction[1];
+    }
+
     public PointOld up() {
         return up(1);
     }

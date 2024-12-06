@@ -22,4 +22,13 @@ public enum Direction {
             case EAST -> new Complex(1, 0);
         };
     }
+
+    public Direction turnRight() {
+        return switch (this) {
+            case NORTH -> EAST;
+            case WEST -> NORTH;
+            case SOUTH -> WEST;
+            case EAST -> SOUTH;
+        };
+    }
 }

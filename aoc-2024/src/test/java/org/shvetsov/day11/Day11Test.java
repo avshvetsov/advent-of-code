@@ -33,4 +33,12 @@ class Day11Test {
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }
+
+    @ParameterizedTest
+    @EnumSource(value = InputAnswer.class, names = {"DAY_11_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
+    public void partTwoDanyInput(InputAnswer param) {
+        long result = day.partTwoDany(Utils.parseInputByNewLine(param.getInput(PATH)), (int) param.getAdditionalInput());
+        System.out.println(result);
+        assertThat(result).isEqualTo(param.getAnswer());
+    }
 }

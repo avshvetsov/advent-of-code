@@ -79,10 +79,12 @@ public enum InputAnswer {
     DAY_14_PART_1_REAL_ANTON("14", 1, "Anton", InputType.REAL, new int[]{101, 103}, 228421332L),
     DAY_14_PART_2_REAL_ANTON("14", 2, "Anton", InputType.REAL, new int[]{101, 103}, 7790L),
 
-    DAY_15_PART_1_EXAMPLE("15", 1, null, InputType.EXAMPLE, -1L),
-    DAY_15_PART_2_EXAMPLE("15", 2, null, InputType.EXAMPLE, -1L),
-    DAY_15_PART_1_REAL_ANTON("15", 1, "Anton", InputType.REAL, -1L),
-    DAY_15_PART_2_REAL_ANTON("15", 2, "Anton", InputType.REAL, -1L),
+    DAY_15_PART_1_1_EXAMPLE("15", "1", 1, null, InputType.EXAMPLE, 2028L),
+    DAY_15_PART_1_2_EXAMPLE("15", "2", 1, null, InputType.EXAMPLE, 10092L),
+    DAY_15_PART_2_3_EXAMPLE("15", "3", 2, null, InputType.EXAMPLE, 618L),
+    DAY_15_PART_2_2_EXAMPLE("15", "2", 2, null, InputType.EXAMPLE, 9021L),
+    DAY_15_PART_1_REAL_ANTON("15", 1, "Anton", InputType.REAL, 1485257L),
+    DAY_15_PART_2_REAL_ANTON("15", 2, "Anton", InputType.REAL, 1475512L),
 
     DAY_16_PART_1_EXAMPLE("16", 1, null, InputType.EXAMPLE, -1L),
     DAY_16_PART_2_EXAMPLE("16", 2, null, InputType.EXAMPLE, -1L),

@@ -43,10 +43,13 @@ public class Utils {
         return list;
     }
 
+    public static boolean isIndexExistInArray(int[] array, int i) {
+        return i >= 0 && i < array.length;
+    }
+
     public static boolean isIndexExistInArray(char[][] array, int row, int column) {
         return isIndexExistInArrayBounds(array.length, array[0].length, row, column);
     }
-
     public static boolean isIndexExistInArray(int[][] array, int row, int column) {
         return isIndexExistInArrayBounds(array.length, array[0].length, row, column);
     }

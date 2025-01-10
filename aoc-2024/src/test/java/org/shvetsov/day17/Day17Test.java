@@ -1,6 +1,7 @@
 package org.shvetsov.day17;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.shvetsov.InputAnswer;
@@ -32,5 +33,12 @@ class Day17Test {
         long result = day.partTwo(Utils.parseInputByNewLine(param.getInput(PATH)));
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
+    }
+
+    @Test
+    void name() {
+        ThreeBitComputer computer = new ThreeBitComputer(15, 0, 0, "2,4,1,2,7,5,4,5,1,3,5,5,0,3,3,0");
+        computer.run();
+        System.out.println(computer.output);
     }
 }

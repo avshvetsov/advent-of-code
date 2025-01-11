@@ -14,12 +14,8 @@ public class Day17 {
         long b = Long.parseLong(StringUtils.substringAfter(input.get(1), "Register B: "));
         long c = Long.parseLong(StringUtils.substringAfter(input.get(2), "Register C: "));
         String program = StringUtils.substringAfter(input.get(4), "Program: ");
-        //Interesting JVM optimization
-//        ThreeBitComputer computer = null;
-//        for (int i = 0; i < 100; i++) {
         ThreeBitComputer computer = new ThreeBitComputer(a, b, c, program);
         computer.run();
-//        }
         return computer.getOutput();
     }
 

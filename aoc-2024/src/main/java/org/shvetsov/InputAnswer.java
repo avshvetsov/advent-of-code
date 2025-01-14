@@ -56,9 +56,9 @@ public enum InputAnswer {
     DAY_10_PART_1_REAL_ANTON("10", 1, "Anton", InputType.REAL, 550L),
     DAY_10_PART_2_REAL_ANTON("10", 2, "Anton", InputType.REAL, 1255L),
 
-    DAY_11_PART_1_EXAMPLE("11", 1, null, InputType.EXAMPLE, 25, 55312L),
-    DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, 25, 231278L),
-    DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, 75, 274229228071551L),
+    DAY_11_PART_1_EXAMPLE("11", 1, null, InputType.EXAMPLE, 55312L, 25),
+    DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, 231278L, 25),
+    DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, 274229228071551L, 75),
 
     DAY_12_PART_1_1_EXAMPLE("12", "1", 1, null, InputType.EXAMPLE, 140L),
     DAY_12_PART_1_2_EXAMPLE("12", "2", 1, null, InputType.EXAMPLE, 772L),
@@ -75,9 +75,9 @@ public enum InputAnswer {
     DAY_13_PART_1_REAL_ANTON("13", 1, "Anton", InputType.REAL, 36954L),
     DAY_13_PART_2_REAL_ANTON("13", 2, "Anton", InputType.REAL, 79352015273424L),
 
-    DAY_14_PART_1_EXAMPLE("14", 1, null, InputType.EXAMPLE, new int[]{11, 7}, 12L),
-    DAY_14_PART_1_REAL_ANTON("14", 1, "Anton", InputType.REAL, new int[]{101, 103}, 228421332L),
-    DAY_14_PART_2_REAL_ANTON("14", 2, "Anton", InputType.REAL, new int[]{101, 103}, 7790L),
+    DAY_14_PART_1_EXAMPLE("14", 1, null, InputType.EXAMPLE,12L, new int[]{11, 7}),
+    DAY_14_PART_1_REAL_ANTON("14", 1, "Anton", InputType.REAL, 228421332L, new int[]{101, 103}),
+    DAY_14_PART_2_REAL_ANTON("14", 2, "Anton", InputType.REAL,7790L, new int[]{101, 103}),
 
     DAY_15_PART_1_1_EXAMPLE("15", "1", 1, null, InputType.EXAMPLE, 2028L),
     DAY_15_PART_1_2_EXAMPLE("15", "2", 1, null, InputType.EXAMPLE, 10092L),
@@ -99,20 +99,25 @@ public enum InputAnswer {
     DAY_17_PART_1_REAL_ANTON("17", 1, "Anton", InputType.REAL, "3,1,4,3,1,7,1,6,3"),
     DAY_17_PART_2_REAL_ANTON("17", 2, "Anton", InputType.REAL, 37221270076916L),
 
-    DAY_18_PART_1_EXAMPLE("18", 1, null, InputType.EXAMPLE, new int[]{12, 7}, 22L),
-    DAY_18_PART_2_EXAMPLE("18", 2, null, InputType.EXAMPLE, new int[]{12, 7}, "6,1"),
-    DAY_18_PART_1_REAL_ANTON("18", 1, "Anton", InputType.REAL, new int[]{1024, 71}, 296L),
-    DAY_18_PART_2_REAL_ANTON("18", 2, "Anton", InputType.REAL, new int[]{1024, 71},"28,44"),
+    DAY_18_PART_1_EXAMPLE("18", 1, null, InputType.EXAMPLE, 22L, 12, 7),
+    DAY_18_PART_2_EXAMPLE("18", 2, null, InputType.EXAMPLE, "6,1", 12, 7),
+    DAY_18_PART_1_REAL_ANTON("18", 1, "Anton", InputType.REAL, 296L, 1024, 71),
+    DAY_18_PART_2_REAL_ANTON("18", 2, "Anton", InputType.REAL,"28,44", 1024, 71),
 
     DAY_19_PART_1_EXAMPLE("19", 1, null, InputType.EXAMPLE, 6L),
     DAY_19_PART_2_EXAMPLE("19", 2, null, InputType.EXAMPLE, 16L),
     DAY_19_PART_1_REAL_ANTON("19", 1, "Anton", InputType.REAL, 226L),
     DAY_19_PART_2_REAL_ANTON("19", 2, "Anton", InputType.REAL, 601201576113503L),
 
-    DAY_20_PART_1_EXAMPLE("20", 1, null, InputType.EXAMPLE, -1L),
-    DAY_20_PART_2_EXAMPLE("20", 2, null, InputType.EXAMPLE, -1L),
-    DAY_20_PART_1_REAL_ANTON("20", 1, "Anton", InputType.REAL, -1L),
-    DAY_20_PART_2_REAL_ANTON("20", 2, "Anton", InputType.REAL, -1L),
+    DAY_20_PART_1_1_EXAMPLE("20", 1, null, InputType.EXAMPLE, 5L, 20, 2),
+    DAY_20_PART_1_2_EXAMPLE("20", 1, null, InputType.EXAMPLE, 8L, 12, 2),
+    DAY_20_PART_1_3_EXAMPLE("20", 1, null, InputType.EXAMPLE, 10L, 10, 2),
+    DAY_20_PART_2_1_EXAMPLE("20", 2, null, InputType.EXAMPLE, 285L, 50, 20),
+    DAY_20_PART_2_2_EXAMPLE("20", 2, null, InputType.EXAMPLE, 129L, 60, 20),
+    DAY_20_PART_2_3_EXAMPLE("20", 2, null, InputType.EXAMPLE, 41L, 70, 20),
+    DAY_20_PART_2_4_EXAMPLE("20", 2, null, InputType.EXAMPLE, 3L, 76, 20),
+    DAY_20_PART_1_REAL_ANTON("20", 1, "Anton", InputType.REAL, 1369L, 100, 2),
+    DAY_20_PART_2_REAL_ANTON("20", 2, "Anton", InputType.REAL, 979012L, 100, 20),
 
     DAY_21_PART_1_EXAMPLE("21", 1, null, InputType.EXAMPLE, -1L),
     DAY_21_PART_2_EXAMPLE("21", 2, null, InputType.EXAMPLE, -1L),
@@ -148,28 +153,21 @@ public enum InputAnswer {
     private final String user;
     private final InputType inputType;
     @Getter
-    private Object additionalInput = null;
+    private final Object[] additionalInput;
     @Getter
     private final Object answer;
 
-    InputAnswer(String day, int part, String user, InputType inputType, Object answer) {
-        this.day = day;
-        this.part = part;
-        this.user = user;
-        this.inputType = inputType;
-        this.answer = answer;
-    }
-
-    InputAnswer(String day, String subInputNum, int part, String user, InputType inputType, Object answer) {
+    InputAnswer(String day, String subInputNum, int part, String user, InputType inputType, Object answer, Object... additionalInput) {
         this.day = day;
         this.subInputNum = subInputNum;
         this.part = part;
         this.user = user;
         this.inputType = inputType;
         this.answer = answer;
+        this.additionalInput = additionalInput;
     }
 
-    InputAnswer(String day, int part, String user, InputType inputType, Object additionalInput, Object answer) {
+    InputAnswer(String day, int part, String user, InputType inputType, Object answer, Object... additionalInput) {
         this.day = day;
         this.part = part;
         this.user = user;

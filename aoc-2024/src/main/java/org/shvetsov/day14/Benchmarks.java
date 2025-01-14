@@ -23,11 +23,11 @@ public class Benchmarks {
 
     @Benchmark
     public void day14PartOneAnton(Blackhole bh) {
-        bh.consume(new Day14().partOne(Utils.parseInputByNewLine(DAY_14_PART_1_REAL_ANTON.getInput(PATH)), (int[]) DAY_14_PART_1_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day14().partOne(Utils.parseInputByNewLine(DAY_14_PART_1_REAL_ANTON.getInput(PATH)), (int[]) DAY_14_PART_1_REAL_ANTON.getAdditionalInput()[0]));
     }
 
     @Benchmark
     public void day14PartTwoAnton(Blackhole bh) {
-        bh.consume(new Day14().partTwo(Utils.parseInputByNewLine(DAY_14_PART_2_REAL_ANTON.getInput(PATH)), (int[]) DAY_14_PART_2_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day14().partTwo(Utils.parseInputByNewLine(DAY_14_PART_2_REAL_ANTON.getInput(PATH)), (int[]) DAY_14_PART_2_REAL_ANTON.getAdditionalInput()[0]));
     }
 }

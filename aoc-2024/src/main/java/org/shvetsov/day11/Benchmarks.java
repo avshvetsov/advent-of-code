@@ -24,16 +24,16 @@ public class Benchmarks {
 
     @Benchmark
     public void day11PartOneAnton(Blackhole bh) {
-        bh.consume(new Day11().partOne(Utils.parseInputByNewLine(DAY_11_PART_1_REAL_ANTON.getInput(PATH)), (int) DAY_11_PART_1_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day11().partOne(Utils.parseInputByNewLine(DAY_11_PART_1_REAL_ANTON.getInput(PATH)), (int) DAY_11_PART_1_REAL_ANTON.getAdditionalInput()[0]));
     }
 
     @Benchmark
     public void day11PartTwoAnton(Blackhole bh) {
-        bh.consume(new Day11().partTwo(Utils.parseInputByNewLine(DAY_11_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_11_PART_2_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day11().partTwo(Utils.parseInputByNewLine(DAY_11_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_11_PART_2_REAL_ANTON.getAdditionalInput()[0]));
     }
 
     @Benchmark
     public void day11PartTwoDany(Blackhole bh) {
-        bh.consume(new Day11().partTwoDany(Utils.parseInputByNewLine(DAY_11_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_11_PART_2_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day11().partTwoDany(Utils.parseInputByNewLine(DAY_11_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_11_PART_2_REAL_ANTON.getAdditionalInput()[0]));
     }
 }

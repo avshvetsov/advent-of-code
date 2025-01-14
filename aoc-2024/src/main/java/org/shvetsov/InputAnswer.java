@@ -104,10 +104,10 @@ public enum InputAnswer {
     DAY_18_PART_1_REAL_ANTON("18", 1, "Anton", InputType.REAL, new int[]{1024, 71}, 296L),
     DAY_18_PART_2_REAL_ANTON("18", 2, "Anton", InputType.REAL, new int[]{1024, 71},"28,44"),
 
-    DAY_19_PART_1_EXAMPLE("19", 1, null, InputType.EXAMPLE, -1L),
-    DAY_19_PART_2_EXAMPLE("19", 2, null, InputType.EXAMPLE, -1L),
-    DAY_19_PART_1_REAL_ANTON("19", 1, "Anton", InputType.REAL, -1L),
-    DAY_19_PART_2_REAL_ANTON("19", 2, "Anton", InputType.REAL, -1L),
+    DAY_19_PART_1_EXAMPLE("19", 1, null, InputType.EXAMPLE, 6L),
+    DAY_19_PART_2_EXAMPLE("19", 2, null, InputType.EXAMPLE, 16L),
+    DAY_19_PART_1_REAL_ANTON("19", 1, "Anton", InputType.REAL, 226L),
+    DAY_19_PART_2_REAL_ANTON("19", 2, "Anton", InputType.REAL, 601201576113503L),
 
     DAY_20_PART_1_EXAMPLE("20", 1, null, InputType.EXAMPLE, -1L),
     DAY_20_PART_2_EXAMPLE("20", 2, null, InputType.EXAMPLE, -1L),

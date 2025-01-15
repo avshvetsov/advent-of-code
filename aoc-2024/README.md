@@ -86,8 +86,8 @@ Benchmarks.day13PartTwoAnton  avgt    3  0,184 ± 0,050  ms/op
 ### Day 14
 ```
 Benchmark                     Mode  Cnt  Score   Error  Units
-Benchmarks.day14PartOneAnton  avgt    3  0,517 ± 0,231  ms/op
-Benchmarks.day14PartTwoAnton  avgt    3  0,079 ± 0,014  ms/op
+Benchmarks.day14PartOneAnton  avgt    3  0,663 ± 0,351  ms/op
+Benchmarks.day14PartTwoAnton  avgt    3  0,207 ± 0,035  ms/op
 ```
 ### Day 15
 ```
@@ -128,7 +128,9 @@ Benchmarks.day20PartTwoAnton         avgt    3  18,672 ± 0,525  ms/op
 ```
 ### Day 21
 ```
-
+Benchmark                     Mode  Cnt  Score   Error  Units
+Benchmarks.day21PartOneAnton  avgt    3  0,084 ± 0,155  ms/op
+Benchmarks.day21PartTwoAnton  avgt    3  0,213 ± 0,153  ms/op
 ```
 ### Day 22
 ```

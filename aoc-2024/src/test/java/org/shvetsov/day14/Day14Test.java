@@ -24,7 +24,7 @@ class Day14Test {
     @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_14_PART_1.+"}, mode = EnumSource.Mode.MATCH_ALL)
     public void partOneInput(InputAnswer param) {
-        long result = day.partOne(Utils.parseInputByNewLine(param.getInput(PATH)), (int[]) param.getAdditionalInput()[0]);
+        long result = day.partOne(Utils.parseInputByNewLine(param.getInput(PATH)), new int[]{(int) param.getAdditionalInput()[0], (int) param.getAdditionalInput()[1]});
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }
@@ -32,7 +32,7 @@ class Day14Test {
     @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_14_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
     public void partTwoInput(InputAnswer param) {
-        long result = day.partTwo(Utils.parseInputByNewLine(param.getInput(PATH)), (int[]) param.getAdditionalInput()[0]);
+        long result = day.partTwo(Utils.parseInputByNewLine(param.getInput(PATH)), new int[]{(int) param.getAdditionalInput()[0], (int) param.getAdditionalInput()[1]});
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }

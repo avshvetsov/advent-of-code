@@ -143,7 +143,7 @@ public enum InputAnswer {
     DAY_24_PART_2_VERIFY_3_EXAMPLE("24", "solved", 2, null, InputType.EXAMPLE, IGNORED, 1234567898765L, 9876542101234L),
     DAY_24_PART_2_REAL_ANTON("24", 2, "Anton", InputType.REAL, "gst,khg,nhn,tvb,vdc,z12,z21,z33"),
 
-    DAY_25_PART_1_EXAMPLE("25", 1, null, InputType.EXAMPLE, -1L),
+    DAY_25_PART_1_EXAMPLE("25", 1, null, InputType.EXAMPLE, 3L),
     DAY_25_PART_2_EXAMPLE("25", 2, null, InputType.EXAMPLE, -1L),
     DAY_25_PART_1_REAL_ANTON("25", 1, "Anton", InputType.REAL, -1L),
     DAY_25_PART_2_REAL_ANTON("25", 2, "Anton", InputType.REAL, -1L),

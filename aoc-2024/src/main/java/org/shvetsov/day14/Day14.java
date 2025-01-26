@@ -45,7 +45,30 @@ public class Day14 {
         while ((101 * i - 52) % 103 != 0) {
             i++;
         }
-        return 101L * i + 13;
+        long result = 101L * i + 13;
+
+        List<Robot> robots = new ArrayList<>();
+        for (String s : input) {
+            int[] position = Arrays.stream(StringUtils.substringBetween(s, "p=", " v=").split(",")).mapToInt(Integer::parseInt).toArray();
+            int[] velocity = Arrays.stream(StringUtils.substringAfter(s, " v=").split(",")).mapToInt(Integer::parseInt).toArray();
+            robots.add(new Robot(new Point(position[1], position[0]), new Point(velocity[1], velocity[0])));
+        }
+        for (int j = 1; j < 8000; j++) {
+            char[][] room = new char[boundary[1]][boundary[0]];
+            for (char[] row : room) {
+                Arrays.fill(row, '.');
+            }
+            for (Robot robot : robots) {
+                robot.move(boundary);
+                room[robot.getPosition().r()][robot.getPosition().c()] = '#';
+            }
+            if (j == result) {
+                System.out.println("Second: " + j);
+                PrintUtils.printArray(room);
+            }
+        }
+
+        return result;
     }
 
 

@@ -1,5 +1,18 @@
 # [Advent of Code 2024](https://adventofcode.com/2024)
 
+## Worth mentioning puzzles (in my opinion)
+### Top 3:
+- [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17)
+- [Day 21: Keypad Conundrum](https://adventofcode.com/2024/day/21)
+- [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)
+### New algorithms:
+- [Day 23: LAN Party](https://adventofcode.com/2024/day/23) - Bron-Kerbosch clique algorithm
+### Strangest
+- [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)
+### Most annoying
+- [Day 24: Crossed Wires](https://adventofcode.com/2024/day/24)
+
+
 ## Benchmark Results
 ### Day 1
 ```

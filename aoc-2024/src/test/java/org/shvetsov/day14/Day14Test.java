@@ -40,6 +40,6 @@ class Day14Test {
     @Test
     @Disabled
     void printer() {
-        day.partTwoPrinter(Utils.parseInputByNewLine(DAY_14_PART_2_REAL_ANTON.getInput(PATH)), (int[]) DAY_14_PART_2_REAL_ANTON.getAdditionalInput()[0]);
+        day.partTwoPrinter(Utils.parseInputByNewLine(DAY_14_PART_2_REAL_ANTON.getInput(PATH)), new int[]{(int) DAY_14_PART_2_REAL_ANTON.getAdditionalInput()[0], (int) DAY_14_PART_2_REAL_ANTON.getAdditionalInput()[1]});
     }
 }

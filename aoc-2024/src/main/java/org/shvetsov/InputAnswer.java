@@ -2,6 +2,8 @@ package org.shvetsov;
 
 import lombok.Getter;
 
+import static org.shvetsov.InputAnswer.Constants.IGNORED;
+
 @SuppressWarnings({"FieldCanBeLocal", "unused"})
 public enum InputAnswer {
 
@@ -133,10 +135,13 @@ public enum InputAnswer {
     DAY_23_PART_1_REAL_ANTON("23", 1, "Anton", InputType.REAL, 1400L),
     DAY_23_PART_2_REAL_ANTON("23", 2, "Anton", InputType.REAL, "am,bc,cz,dc,gy,hk,li,qf,th,tj,wf,xk,xo"),
 
-    DAY_24_PART_1_EXAMPLE("24", 1, null, InputType.EXAMPLE, -1L),
-    DAY_24_PART_2_EXAMPLE("24", 2, null, InputType.EXAMPLE, -1L),
-    DAY_24_PART_1_REAL_ANTON("24", 1, "Anton", InputType.REAL, -1L),
-    DAY_24_PART_2_REAL_ANTON("24", 2, "Anton", InputType.REAL, -1L),
+    DAY_24_PART_1_1_EXAMPLE("24", "1", 1, null, InputType.EXAMPLE, 4L),
+    DAY_24_PART_1_2_EXAMPLE("24", "2", 1, null, InputType.EXAMPLE, 2024L),
+    DAY_24_PART_1_REAL_ANTON("24", 1, "Anton", InputType.REAL, 51410244478064L),
+    DAY_24_PART_2_VERIFY_1_EXAMPLE("24", "solved", 2, null, InputType.EXAMPLE, IGNORED, 3L, 7L),
+    DAY_24_PART_2_VERIFY_2_EXAMPLE("24", "solved", 2, null, InputType.EXAMPLE, IGNORED, 10000L, 123L),
+    DAY_24_PART_2_VERIFY_3_EXAMPLE("24", "solved", 2, null, InputType.EXAMPLE, IGNORED, 1234567898765L, 9876542101234L),
+    DAY_24_PART_2_REAL_ANTON("24", 2, "Anton", InputType.REAL, "gst,khg,nhn,tvb,vdc,z12,z21,z33"),
 
     DAY_25_PART_1_EXAMPLE("25", 1, null, InputType.EXAMPLE, -1L),
     DAY_25_PART_2_EXAMPLE("25", 2, null, InputType.EXAMPLE, -1L),
@@ -209,4 +214,7 @@ public enum InputAnswer {
 
     }
 
+    static class Constants {
+        static final String IGNORED = "ignored";
+    }
 }

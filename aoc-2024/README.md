@@ -147,7 +147,9 @@ Benchmarks.day23PartTwoAnton              avgt    3  153,548 ± 18,533  ms/op
 ```
 ### Day 24
 ```
-
+Benchmark                     Mode  Cnt  Score   Error  Units
+Benchmarks.day24PartOneAnton  avgt    3  1,753 ± 2,368  ms/op
+Benchmarks.day24PartTwoAnton  avgt    3  0,091 ± 0,034  ms/op
 ```
 ### Day 25
 ```

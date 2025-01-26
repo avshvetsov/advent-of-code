@@ -1,0 +1,32 @@
+x00: 1
+x01: 1
+x02: 0
+y00: 1
+y01: 0
+y02: 1
+
+y00 XOR x00 -> z00
+y00 AND x00 -> spq
+gpk AND spq -> bvk
+spq XOR gpk -> z01
+y01 XOR x01 -> gpk
+y01 AND x01 -> khh
+bvk OR khh -> nmw
+nmw AND bgp -> bcr
+nmw XOR bgp -> z02
+x02 XOR y02 -> bgp
+y02 AND x02 -> psw
+bcr OR psw -> dfh
+dfh XOR fpk -> z03
+fpk AND dfh -> ccr
+y03 XOR x03 -> fpk
+
+
+
+pkj OR msp -> kvv
+x44 XOR y44 -> vwd
+kvv XOR vwd -> z44
+
+x44 AND y44 -> bds
+vwd AND kvv -> mgw
+mgw OR bds -> z45

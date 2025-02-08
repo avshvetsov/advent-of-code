@@ -24,18 +24,18 @@ public class Benchmarks {
     @Warmup(iterations = 2, time = 3)
     @Measurement(iterations = 3, time = 5)
     public void day15PartOneAnton(Blackhole bh) {
-        bh.consume(new Day15().partOne(Utils.parseInputByNewLine(DAY_15_PART_1_REAL_ANTON.getInput(PATH)), (int) DAY_15_PART_1_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day15().partOne(Utils.parseInputByNewLine(DAY_15_PART_1_REAL_ANTON.getInput(PATH)), (int) DAY_15_PART_1_REAL_ANTON.getAdditionalInput()[0]));
     }
 
     @Benchmark
     @BenchmarkMode({Mode.SingleShotTime})
     public void day15PartTwoAnton(Blackhole bh) {
-        bh.consume(new Day15().partTwo(Utils.parseInputByNewLine(DAY_15_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_15_PART_2_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day15().partTwo(Utils.parseInputByNewLine(DAY_15_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_15_PART_2_REAL_ANTON.getAdditionalInput()[0]));
     }
 
     @Benchmark
     @BenchmarkMode({Mode.SingleShotTime})
     public void day15PartTwoSingleRangeSetAnton(Blackhole bh) {
-        bh.consume(new Day15().partTwoSingleRangeSet(Utils.parseInputByNewLine(DAY_15_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_15_PART_2_REAL_ANTON.getAdditionalInput()));
+        bh.consume(new Day15().partTwoSingleRangeSet(Utils.parseInputByNewLine(DAY_15_PART_2_REAL_ANTON.getInput(PATH)), (int) DAY_15_PART_2_REAL_ANTON.getAdditionalInput()[0]));
     }
 }

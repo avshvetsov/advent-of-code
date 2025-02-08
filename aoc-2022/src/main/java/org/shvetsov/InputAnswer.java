@@ -85,20 +85,20 @@ public enum InputAnswer {
     DAY_14_PART_1_REAL_ANTON("14", 1, "Anton", InputType.REAL, 768L),
     DAY_14_PART_2_REAL_ANTON("14", 2, "Anton", InputType.REAL, 26686L),
 
-    DAY_15_PART_1_EXAMPLE("15", 1, null, InputType.EXAMPLE, 10, 26L),
-    DAY_15_PART_2_EXAMPLE("15", 2, null, InputType.EXAMPLE, 20, 56000011L),
-    DAY_15_PART_1_REAL_ANTON("15", 1, "Anton", InputType.REAL, 2000000, 4_582_667L),
-    DAY_15_PART_2_REAL_ANTON("15", 2, "Anton", InputType.REAL, 4000000, 10_961_118_625_406L),
+    DAY_15_PART_1_EXAMPLE("15", 1, null, InputType.EXAMPLE, 26L, 10),
+    DAY_15_PART_2_EXAMPLE("15", 2, null, InputType.EXAMPLE, 56000011L, 20),
+    DAY_15_PART_1_REAL_ANTON("15", 1, "Anton", InputType.REAL, 4_582_667L, 2000000),
+    DAY_15_PART_2_REAL_ANTON("15", 2, "Anton", InputType.REAL, 10_961_118_625_406L, 4000000),
 
     DAY_16_PART_1_EXAMPLE("16", 1, null, InputType.EXAMPLE, 1651L),
     DAY_16_PART_2_EXAMPLE("16", 2, null, InputType.EXAMPLE, 1707L),
     DAY_16_PART_1_REAL_ANTON("16", 1, "Anton", InputType.REAL, 1653L),
     DAY_16_PART_2_REAL_ANTON("16", 2, "Anton", InputType.REAL, 2223L),
 
-    DAY_17_PART_1_EXAMPLE("17", 1, null, InputType.EXAMPLE, -1L),
-    DAY_17_PART_2_EXAMPLE("17", 2, null, InputType.EXAMPLE, -1L),
-    DAY_17_PART_1_REAL_ANTON("17", 1, "Anton", InputType.REAL, -1L),
-    DAY_17_PART_2_REAL_ANTON("17", 2, "Anton", InputType.REAL, -1L),
+    DAY_17_PART_1_EXAMPLE("17", 1, null, InputType.EXAMPLE, 3068L, 2022),
+    DAY_17_PART_2_EXAMPLE("17", 2, null, InputType.EXAMPLE, 1514285714288L, 1000000000000L),
+    DAY_17_PART_1_REAL_ANTON("17", 1, "Anton", InputType.REAL, 3186L, 2022),
+    DAY_17_PART_2_REAL_ANTON("17", 2, "Anton", InputType.REAL, -1L, 1000000000000L),
 
     DAY_18_PART_1_EXAMPLE("18", 1, null, InputType.EXAMPLE, -1L),
     DAY_18_PART_2_EXAMPLE("18", 2, null, InputType.EXAMPLE, -1L),
@@ -149,28 +149,21 @@ public enum InputAnswer {
     private final String user;
     private final InputType inputType;
     @Getter
-    private Object additionalInput = null;
+    private final Object[] additionalInput;
     @Getter
     private final Object answer;
 
-    InputAnswer(String day, int part, String user, InputType inputType, Object answer) {
-        this.day = day;
-        this.part = part;
-        this.user = user;
-        this.inputType = inputType;
-        this.answer = answer;
-    }
-
-    InputAnswer(String day, String subInputNum, int part, String user, InputType inputType, Object answer) {
+    InputAnswer(String day, String subInputNum, int part, String user, InputType inputType, Object answer, Object... additionalInput) {
         this.day = day;
         this.subInputNum = subInputNum;
         this.part = part;
         this.user = user;
         this.inputType = inputType;
         this.answer = answer;
+        this.additionalInput = additionalInput;
     }
 
-    InputAnswer(String day, int part, String user, InputType inputType, Object additionalInput, Object answer) {
+    InputAnswer(String day, int part, String user, InputType inputType, Object answer, Object... additionalInput) {
         this.day = day;
         this.part = part;
         this.user = user;
@@ -211,6 +204,10 @@ public enum InputAnswer {
         }
 
 
+    }
+
+    static class Constants {
+        static final String IGNORED = "ignored";
     }
 
 }

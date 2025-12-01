@@ -9,7 +9,7 @@ import java.util.Set;
 public class Rock {
 
     static final int SPAWN_HEIGHT = 5;
-    static final int SPAWN_COLUMN = 3;
+    static final int SPAWN_COLUMN = 2;
 
     private Set<Point> points;
 
@@ -18,26 +18,17 @@ public class Rock {
         this.points = shape.getShapePoints(base);
     }
 
-    public boolean canMove(char[][] cave, Direction direction) {
-        for (Point p : this.points) {
-            Point n = p.move(direction);
-            if (cave[n.r()][n.c()] == '#') {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public void moveIfCan(char[][] cave, Direction direction) {
+    public boolean moveIfCan(char[][] cave, Direction direction) {
         Set<Point> newPoints = new HashSet<>();
         for (Point p : this.points) {
             Point n = p.move(direction);
-            if (cave[n.r()][n.c()] == '#') {
-                return;
+            if (n.c() < 0 || n.c() >= cave[0].length || cave[n.r()][n.c()] == '#') {
+                return false;
             }
             newPoints.add(n);
         }
         this.points = newPoints;
+        return true;
     }
 
     public Set<Point> getShape() {

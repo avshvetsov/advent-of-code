@@ -98,7 +98,7 @@ public enum InputAnswer {
     DAY_17_PART_1_EXAMPLE("17", 1, null, InputType.EXAMPLE, 3068L, 2022),
     DAY_17_PART_2_EXAMPLE("17", 2, null, InputType.EXAMPLE, 1514285714288L, 1000000000000L),
     DAY_17_PART_1_REAL_ANTON("17", 1, "Anton", InputType.REAL, 3186L, 2022),
-    DAY_17_PART_2_REAL_ANTON("17", 2, "Anton", InputType.REAL, -1L, 1000000000000L),
+    DAY_17_PART_2_REAL_ANTON("17", 2, "Anton", InputType.REAL, 1566376811584L, 1000000000000L),
 
     DAY_18_PART_1_EXAMPLE("18", 1, null, InputType.EXAMPLE, -1L),
     DAY_18_PART_2_EXAMPLE("18", 2, null, InputType.EXAMPLE, -1L),

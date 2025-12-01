@@ -25,6 +25,6 @@ public class Benchmarks {
 
     @Benchmark
     public void day17PartTwoAnton(Blackhole bh) {
-        bh.consume(new Day17().partTwo(Utils.parseInputByNewLine(DAY_17_PART_2_REAL_ANTON.getInput(PATH)), (long) DAY_17_PART_1_REAL_ANTON.getAdditionalInput()[0]));
+        bh.consume(new Day17().partTwo(Utils.parseInputByNewLine(DAY_17_PART_2_REAL_ANTON.getInput(PATH)), (long) DAY_17_PART_2_REAL_ANTON.getAdditionalInput()[0]));
     }
 }

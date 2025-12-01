@@ -7,15 +7,51 @@ import java.util.List;
  */
 public class Day1 {
 
-    public long partOne(List<String> input) {
+    static final int START = 50;
 
-        return -1;
+    public long partOne(List<String> input) {
+        int zeroCount = 0;
+        int position = START;
+        for (String s : input) {
+            int num = Integer.parseInt(s.substring(1));
+            if (s.startsWith("L")) {
+                position -= num;
+            } else {
+                position += num;
+            }
+            if (position % 100 == 0) {
+                zeroCount++;
+            }
+        }
+        return zeroCount;
     }
 
 
     public long partTwo(List<String> input) {
-
-        return -1;
+        int zeroCount = 0;
+        int position = START;
+        for (String s : input) {
+            int num = Integer.parseInt(s.substring(1));
+            zeroCount += num / 100;
+            num %= 100;
+            if (s.startsWith("L")) {
+                position -= num;
+            } else {
+                position += num;
+            }
+            if (position < 0) {
+                if (position + num != 0) {
+                    zeroCount++;
+                }
+                position += 100;
+            } else if (position >= 100) {
+                zeroCount++;
+                position -= 100;
+            } else if (position == 0) {
+                zeroCount++;
+            }
+        }
+        return zeroCount;
     }
 
 }

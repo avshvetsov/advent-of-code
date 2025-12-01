@@ -6,10 +6,10 @@ import lombok.Getter;
 public enum InputAnswer {
 
     // Day 1
-    DAY_1_PART_1_EXAMPLE("1", 1, null, InputType.EXAMPLE, -1L),
-    DAY_1_PART_2_EXAMPLE("1", 2, null, InputType.EXAMPLE, -1L),
-    DAY_1_PART_1_REAL_ANTON("1", 1, "Anton", InputType.REAL, -1L),
-    DAY_1_PART_2_REAL_ANTON("1", 2, "Anton", InputType.REAL, -1L),
+    DAY_1_PART_1_EXAMPLE("1", 1, null, InputType.EXAMPLE, 3L),
+    DAY_1_PART_2_EXAMPLE("1", 2, null, InputType.EXAMPLE, 6L),
+    DAY_1_PART_1_REAL_ANTON("1", 1, "Anton", InputType.REAL, 980L),
+    DAY_1_PART_2_REAL_ANTON("1", 2, "Anton", InputType.REAL, 5961L),
 
     // Day 2 
     DAY_2_PART_1_EXAMPLE("2", 1, null, InputType.EXAMPLE, -1L),

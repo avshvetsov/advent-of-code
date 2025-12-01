@@ -145,7 +145,7 @@ public enum InputAnswer {
 
     DAY_25_PART_1_EXAMPLE("25", 1, null, InputType.EXAMPLE, 3L),
     DAY_25_PART_2_EXAMPLE("25", 2, null, InputType.EXAMPLE, -1L),
-    DAY_25_PART_1_REAL_ANTON("25", 1, "Anton", InputType.REAL, -1L),
+    DAY_25_PART_1_REAL_ANTON("25", 1, "Anton", InputType.REAL, 2978L),
     DAY_25_PART_2_REAL_ANTON("25", 2, "Anton", InputType.REAL, -1L),
     ;
 

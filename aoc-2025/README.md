@@ -13,29 +13,16 @@
 |-----|----------------------------------------------------------|----------|------------|-----------|----------------|
 | 1   | [Secret Entrance](https://adventofcode.com/2025/day/1)   | 1h 30m   | 1/10       | 2/10      | -              |
 | 2   | [Gift Shop](https://adventofcode.com/2025/day/2)         | 2h       | 2/10       | 3/10      | Divisor search |
-| 3   |                                                          |          |            |           |                |
-| 4   |                                                          |          |            |           |                |
-| 5   |                                                          |          |            |           |                |
-| 6   |                                                          |          |            |           |                |
-| 7   |                                                          |          |            |           |                |
-| 8   |                                                          |          |            |           |                |
-| 9   |                                                          |          |            |           |                |
-| 10  |                                                          |          |            |           |                |
-| 11  |                                                          |          |            |           |                |
-| 12  |                                                          |          |            |           |                |
-| 13  |                                                          |          |            |           |                |
-| 14  |                                                          |          |            |           |                |
-| 15  |                                                          |          |            |           |                |
-| 16  |                                                          |          |            |           |                |
-| 17  |                                                          |          |            |           |                |
-| 18  |                                                          |          |            |           |                |
-| 19  |                                                          |          |            |           |                |
-| 20  |                                                          |          |            |           |                |
-| 21  |                                                          |          |            |           |                |
-| 22  |                                                          |          |            |           |                |
-| 23  |                                                          |          |            |           |                |
-| 24  |                                                          |          |            |           |                |
-| 25  |                                                          |          |            |           |                |
+| 3   | [Lobby](https://adventofcode.com/2025/day/3)             |          |            |           |                |
+| 4   | [Day 4](https://adventofcode.com/2025/day/4)             |          |            |           |                |
+| 5   | [Day 5](https://adventofcode.com/2025/day/5)             |          |            |           |                |
+| 6   | [Day 6](https://adventofcode.com/2025/day/6)             |          |            |           |                |
+| 7   | [Day 7](https://adventofcode.com/2025/day/7)             |          |            |           |                |
+| 8   | [Day 8](https://adventofcode.com/2025/day/8)             |          |            |           |                |
+| 9   | [Day 9](https://adventofcode.com/2025/day/9)             |          |            |           |                |
+| 10  | [Day 10](https://adventofcode.com/2025/day/10)           |          |            |           |                |
+| 11  | [Day 11](https://adventofcode.com/2025/day/11)           |          |            |           |                |
+| 12  | [Day 12](https://adventofcode.com/2025/day/12)           |          |            |           |                |
 
 ### Day 1
 ```
@@ -86,58 +73,6 @@ Benchmarks.day1PartTwoAnton  avgt    3  0,301 ± 0,232  ms/op
 
 ```
 ### Day 12
-```
-
-```
-### Day 13
-```
-
-```
-### Day 14
-```
-
-```
-### Day 15
-```
-
-```
-### Day 16
-```
-
-```
-### Day 17
-```
-
-```
-### Day 18
-```
-
-```
-### Day 19
-```
-
-```
-### Day 20
-```
-
-```
-### Day 21
-```
-
-```
-### Day 22
-```
-
-```
-### Day 23
-```
-
-```
-### Day 24
-```
-
-```
-### Day 25
 ```
 
 ```

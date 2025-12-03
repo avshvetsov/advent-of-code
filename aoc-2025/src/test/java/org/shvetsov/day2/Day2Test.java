@@ -1,6 +1,7 @@
 package org.shvetsov.day2;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.shvetsov.InputAnswer;
@@ -32,5 +33,11 @@ class Day2Test {
         long result = day.partTwo(Utils.parseInputByNewLine(param.getInput(PATH)));
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
+    }
+
+
+    @Test
+    void name() {
+        System.out.println("12345".compareTo("1234"));
     }
 }

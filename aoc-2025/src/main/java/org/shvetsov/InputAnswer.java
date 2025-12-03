@@ -15,7 +15,7 @@ public enum InputAnswer {
     DAY_2_PART_1_EXAMPLE("2", 1, null, InputType.EXAMPLE, 1227775554L),
     DAY_2_PART_2_EXAMPLE("2", 2, null, InputType.EXAMPLE, 4174379265L),
     DAY_2_PART_1_REAL_ANTON("2", 1, "Anton", InputType.REAL, 19219508902L),
-    DAY_2_PART_2_REAL_ANTON("2", 2, "Anton", InputType.REAL, -1L),
+    DAY_2_PART_2_REAL_ANTON("2", 2, "Anton", InputType.REAL, 27180728081L),
 
     // Day 3
     DAY_3_PART_1_EXAMPLE("3", 1, null, InputType.EXAMPLE, -1L),

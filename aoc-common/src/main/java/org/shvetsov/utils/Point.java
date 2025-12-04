@@ -1,5 +1,10 @@
 package org.shvetsov.utils;
 
+
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public record Point(int r, int c) {
 
     public Point withR(int r) {
@@ -38,6 +43,7 @@ public record Point(int r, int c) {
     public Point up() {
         return up(1);
     }
+
     public Point up(int steps) {
         return this.withR(r - steps);
     }
@@ -45,6 +51,7 @@ public record Point(int r, int c) {
     public Point down() {
         return down(1);
     }
+
     public Point down(int steps) {
         return this.withR(r + steps);
     }
@@ -52,6 +59,7 @@ public record Point(int r, int c) {
     public Point right() {
         return right(1);
     }
+
     public Point right(int steps) {
         return this.withC(c + steps);
     }
@@ -59,6 +67,7 @@ public record Point(int r, int c) {
     public Point left() {
         return left(1);
     }
+
     public Point left(int steps) {
         return this.withC(c - steps);
     }
@@ -80,7 +89,6 @@ public record Point(int r, int c) {
     }
 
 
-
     public Point subtract(Point other) {
         return new Point(r() - other.r(), c() - other.c());
     }
@@ -90,4 +98,23 @@ public record Point(int r, int c) {
     }
 
 
+    public Set<Point> neighbors(boolean includeDiagonal) {
+        if (includeDiagonal) {
+            return Set.of(up(), down(), right(), left(), upRight(), downRight(), downLeft(), upLeft());
+        } else {
+            return Set.of(up(), down(), right(), left());
+        }
+    }
+
+    public Set<Point> neighbors(char[][] array, boolean includeDiagonal) {
+        if (includeDiagonal) {
+            return Stream.of(up(), down(), right(), left(), upRight(), downRight(), downLeft(), upLeft())
+                    .filter(point -> point.isIndexExistInArray(array))
+                    .collect(Collectors.toSet());
+        } else {
+            return Stream.of(up(), down(), right(), left())
+                    .filter(point -> point.isIndexExistInArray(array))
+                    .collect(Collectors.toSet());
+        }
+    }
 }

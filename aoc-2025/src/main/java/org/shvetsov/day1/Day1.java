@@ -36,20 +36,16 @@ public class Day1 {
             num %= 100;
             if (s.startsWith("L")) {
                 position -= num;
-            } else {
-                position += num;
-            }
-            if (position < 0) {
-                if (position + num != 0) {
+                if (position <= 0 && position + num != 0) {
                     zeroCount++;
                 }
-                position += 100;
-            } else if (position >= 100) {
-                zeroCount++;
-                position -= 100;
-            } else if (position == 0) {
-                zeroCount++;
+            } else {
+                position += num;
+                if (position >= 100) {
+                    zeroCount++;
+                }
             }
+            position = (position + 100) % 100;
         }
         return zeroCount;
     }

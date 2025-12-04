@@ -1,6 +1,7 @@
 package org.shvetsov.day3;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.shvetsov.InputAnswer;
@@ -34,4 +35,9 @@ class Day3Test {
         assertThat(result).isEqualTo(param.getAnswer());
     }
 
+    @Test
+    void name() {
+        int i = '9';
+        System.out.println(i);
+    }
 }

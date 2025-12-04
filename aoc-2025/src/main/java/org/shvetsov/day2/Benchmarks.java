@@ -26,4 +26,14 @@ public class Benchmarks {
     public void day1PartTwoAnton(Blackhole bh) {
         bh.consume(new Day2().partTwo(Utils.parseInputByNewLine(DAY_2_PART_2_REAL_ANTON.getInput(PATH))));
     }
+
+    @Benchmark
+    public void day1PartOneRegexAnton(Blackhole bh) {
+        bh.consume(new Day2().partOneRegex(Utils.parseInputByNewLine(DAY_2_PART_1_REAL_ANTON.getInput(PATH))));
+    }
+
+    @Benchmark
+    public void day1PartTwoRegexAnton(Blackhole bh) {
+        bh.consume(new Day2().partTwoRegex(Utils.parseInputByNewLine(DAY_2_PART_2_REAL_ANTON.getInput(PATH))));
+    }
 }

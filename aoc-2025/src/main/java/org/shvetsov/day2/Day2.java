@@ -81,4 +81,29 @@ public class Day2 {
         return invalidIds.stream().mapToLong(Long::longValue).sum();
     }
 
+    public long partOneRegex(List<String> input) {
+        String regex = "^(\\d+)\\1$";
+        return findInvalidIdsSum(input, regex);
+    }
+
+    private long findInvalidIdsSum(List<String> input, String invalidRegexPattern) {
+        long sum = 0;
+        for (String range : input.getFirst().split(",")) {
+            String[] fromTo = range.split("-");
+            long from = Long.parseLong(fromTo[0]);
+            long to = Long.parseLong(fromTo[1]);
+            for (long i = from; i <= to; i++) {
+                if (String.valueOf(i).matches(invalidRegexPattern)) {
+                    sum += i;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public long partTwoRegex(List<String> input) {
+        String regex = "^(\\d+)\\1+$";
+        return findInvalidIdsSum(input, regex);
+    }
+
 }

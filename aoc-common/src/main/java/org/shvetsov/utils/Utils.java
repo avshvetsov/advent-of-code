@@ -27,7 +27,7 @@ public class Utils {
                 .orElse(0);
         char[][] charsTwoDimArray = new char[inputLines.size()][columns];
         for (int i = 0; i < inputLines.size(); i++) {
-            System.arraycopy(inputLines.get(i).toCharArray(), 0, charsTwoDimArray[i], 0, columns);
+            System.arraycopy(inputLines.get(i).toCharArray(), 0, charsTwoDimArray[i], 0, Math.min(columns, inputLines.get(i).length()));
         }
         return charsTwoDimArray;
     }

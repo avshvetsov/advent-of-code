@@ -33,5 +33,4 @@ class Day6Test {
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }
-
 }

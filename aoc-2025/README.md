@@ -16,7 +16,7 @@
 | 3   | [Lobby](https://adventofcode.com/2025/day/3)               | 1h     | 2/10       | 3/10      | Recursion             |
 | 4   | [Printing Department](https://adventofcode.com/2025/day/4) | 1h     | 2/10       | 2/10      | Queue                 |
 | 5   | [Cafeteria](https://adventofcode.com/2025/day/5)           | 1h     | 3/10       | 3/10      | RangeSet              |
-| 6   | [Day 6](https://adventofcode.com/2025/day/6)               |        |            |           |                       |
+| 6   | [Trash Compactor](https://adventofcode.com/2025/day/6)     | 1h 30m | 3/10       | 3/10      | -                     |
 | 7   | [Day 7](https://adventofcode.com/2025/day/7)               |        |            |           |                       |
 | 8   | [Day 8](https://adventofcode.com/2025/day/8)               |        |            |           |                       |
 | 9   | [Day 9](https://adventofcode.com/2025/day/9)               |        |            |           |                       |
@@ -52,11 +52,15 @@ Benchmarks.day4PartTwoAnton  avgt    3  3,503 ± 2,395  ms/op
 ```
 ### Day 5
 ```
-
+Benchmark                    Mode  Cnt  Score   Error  Units
+Benchmarks.day5PartOneAnton  avgt    3  0,629 ± 0,099  ms/op
+Benchmarks.day5PartTwoAnton  avgt    3  0,471 ± 0,710  ms/op
 ```
 ### Day 6
 ```
-
+Benchmark                    Mode  Cnt  Score   Error  Units
+Benchmarks.day6PartOneAnton  avgt    3  0,801 ± 0,545  ms/op
+Benchmarks.day6PartTwoAnton  avgt    3  0,437 ± 0,268  ms/op
 ```
 ### Day 7
 ```

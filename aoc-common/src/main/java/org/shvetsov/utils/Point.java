@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public record Point(int r, int c) {
+public record Point(int r, int c) implements Comparable<Point> {
 
     public Point withR(int r) {
         return new Point(r, c());
@@ -115,6 +115,17 @@ public record Point(int r, int c) {
             return Stream.of(up(), down(), right(), left())
                     .filter(point -> point.isIndexExistInArray(array))
                     .collect(Collectors.toSet());
+        }
+    }
+
+    @Override
+    public int compareTo(Point o) {
+        if (r != o.r) {
+            return r - o.r;
+        } else if (c != o.c) {
+            return c - o.c;
+        } else {
+            return 0;
         }
     }
 }

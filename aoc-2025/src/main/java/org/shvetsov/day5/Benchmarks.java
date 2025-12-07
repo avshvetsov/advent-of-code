@@ -26,4 +26,14 @@ public class Benchmarks {
     public void day5PartTwoAnton(Blackhole bh) {
         bh.consume(new Day5().partTwo(Utils.parseInputByNewLine(DAY_5_PART_2_REAL_ANTON.getInput(PATH))));
     }
+
+    @Benchmark
+    public void day5PartOneTreeMapAnton(Blackhole bh) {
+        bh.consume(new Day5().partOneTreeMap(Utils.parseInputByNewLine(DAY_5_PART_1_REAL_ANTON.getInput(PATH))));
+    }
+
+    @Benchmark
+    public void day5PartTwoTreeMapAnton(Blackhole bh) {
+        bh.consume(new Day5().partTwoTreeMap(Utils.parseInputByNewLine(DAY_5_PART_2_REAL_ANTON.getInput(PATH))));
+    }
 }

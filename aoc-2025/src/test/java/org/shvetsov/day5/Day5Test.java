@@ -27,9 +27,25 @@ class Day5Test {
     }
 
     @ParameterizedTest
+    @EnumSource(value = InputAnswer.class, names = {"DAY_5_PART_1.+"}, mode = EnumSource.Mode.MATCH_ALL)
+    public void partOneTreeMapInput(InputAnswer param) {
+        long result = day.partOneTreeMap(Utils.parseInputByNewLine(param.getInput(PATH)));
+        System.out.println(result);
+        assertThat(result).isEqualTo(param.getAnswer());
+    }
+
+    @ParameterizedTest
     @EnumSource(value = InputAnswer.class, names = {"DAY_5_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
     public void partTwoInput(InputAnswer param) {
         long result = day.partTwo(Utils.parseInputByNewLine(param.getInput(PATH)));
+        System.out.println(result);
+        assertThat(result).isEqualTo(param.getAnswer());
+    }
+
+    @ParameterizedTest
+    @EnumSource(value = InputAnswer.class, names = {"DAY_5_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
+    public void partTwoTreeMapInput(InputAnswer param) {
+        long result = day.partTwoTreeMap(Utils.parseInputByNewLine(param.getInput(PATH)));
         System.out.println(result);
         assertThat(result).isEqualTo(param.getAnswer());
     }

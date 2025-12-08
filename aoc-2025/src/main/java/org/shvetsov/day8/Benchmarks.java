@@ -6,8 +6,7 @@ import org.shvetsov.utils.Utils;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.shvetsov.InputAnswer.DAY_8_PART_1_REAL_ANTON;
-import static org.shvetsov.InputAnswer.DAY_8_PART_2_REAL_ANTON;
+import static org.shvetsov.InputAnswer.*;
 import static org.shvetsov.InputAnswer.InputFormat.PATH;
 
 @BenchmarkMode({Mode.AverageTime})
@@ -19,7 +18,7 @@ public class Benchmarks {
 
     @Benchmark
     public void day8PartOneAnton(Blackhole bh) {
-        bh.consume(new Day8().partOne(Utils.parseInputByNewLine(DAY_8_PART_1_REAL_ANTON.getInput(PATH))));
+        bh.consume(new Day8().partOne(Utils.parseInputByNewLine(DAY_8_PART_1_REAL_ANTON.getInput(PATH)), (int) DAY_8_PART_1_REAL_ANTON.getAdditionalInput()[0]));
     }
 
     @Benchmark

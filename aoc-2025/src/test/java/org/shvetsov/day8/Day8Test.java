@@ -34,4 +34,20 @@ class Day8Test {
         assertThat(result).isEqualTo(param.getAnswer());
     }
 
+    @ParameterizedTest
+    @EnumSource(value = InputAnswer.class, names = {"DAY_8_PART_1.+"}, mode = EnumSource.Mode.MATCH_ALL)
+    public void partOneDisjoinSetUnionInput(InputAnswer param) {
+        long result = day.partOneDisjoinSetUnion(Utils.parseInputByNewLine(param.getInput(PATH)), (int) param.getAdditionalInput()[0]);
+        System.out.println(result);
+        assertThat(result).isEqualTo(param.getAnswer());
+    }
+
+    @ParameterizedTest
+    @EnumSource(value = InputAnswer.class, names = {"DAY_8_PART_2.+"}, mode = EnumSource.Mode.MATCH_ALL)
+    public void partTwoDisjoinSetUnionInput(InputAnswer param) {
+        long result = day.partTwoDisjoinSetUnion(Utils.parseInputByNewLine(param.getInput(PATH)));
+        System.out.println(result);
+        assertThat(result).isEqualTo(param.getAnswer());
+    }
+
 }

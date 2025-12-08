@@ -9,18 +9,8 @@ import java.util.*;
  */
 public class Day8 {
 
-    //TODO: розібратись з тим що таке Disjoint Set і як з його допомогою вирішити цю проблему
     public long partOne(List<String> input, int connections) {
-        NavigableMap<Long, Pair<Integer, Integer>> distancePair = new TreeMap<>();
-        for (int i = 0; i < input.size(); i++) {
-            String[] s1 = input.get(i).split(",");
-            Point3D p1 = new Point3D(Integer.parseInt(s1[0]), Integer.parseInt(s1[1]), Integer.parseInt(s1[2]));
-            for (int j = i + 1; j < input.size(); j++) {
-                String[] s2 = input.get(j).split(",");
-                Point3D p2 = new Point3D(Integer.parseInt(s2[0]), Integer.parseInt(s2[1]), Integer.parseInt(s2[2]));
-                distancePair.put(p1.squareDistance(p2), Pair.of(i, j));
-            }
-        }
+        NavigableMap<Long, Pair<Integer, Integer>> distancePair = calculateDistancePairs(input);
 
         List<Set<Integer>> circuits = new ArrayList<>();
         for (int i = 0; i < connections; i++) {
@@ -51,16 +41,7 @@ public class Day8 {
                 .orElse(0);
     }
 
-    private Set<Integer> findCircuitWithId(List<Set<Integer>> circuits, Integer id) {
-        for (Set<Integer> circuit : circuits) {
-            if (circuit.contains(id)) {
-                return circuit;
-            }
-        }
-        return null;
-    }
-
-    public long partTwo(List<String> input) {
+    private NavigableMap<Long, Pair<Integer, Integer>> calculateDistancePairs(List<String> input) {
         NavigableMap<Long, Pair<Integer, Integer>> distancePair = new TreeMap<>();
         for (int i = 0; i < input.size(); i++) {
             String[] s1 = input.get(i).split(",");
@@ -71,6 +52,20 @@ public class Day8 {
                 distancePair.put(p1.squareDistance(p2), Pair.of(i, j));
             }
         }
+        return distancePair;
+    }
+
+    private Set<Integer> findCircuitWithId(List<Set<Integer>> circuits, Integer id) {
+        for (Set<Integer> circuit : circuits) {
+            if (circuit.contains(id)) {
+                return circuit;
+            }
+        }
+        return null;
+    }
+
+    public long partTwo(List<String> input) {
+        NavigableMap<Long, Pair<Integer, Integer>> distancePair = calculateDistancePairs(input);
 
         List<Set<Integer>> circuits = new ArrayList<>();
         Pair<Integer, Integer> pair;
@@ -94,6 +89,34 @@ public class Day8 {
                 circuits.add(circuit);
             }
         } while (circuits.getFirst().size() != input.size());
+        return Long.parseLong(input.get(pair.getLeft()).split(",")[0]) * Long.parseLong(input.get(pair.getRight()).split(",")[0]);
+    }
+
+    public long partOneDisjoinSetUnion(List<String> input, int connections) {
+        NavigableMap<Long, Pair<Integer, Integer>> distancePair = calculateDistancePairs(input);
+        UnionFind uf = new UnionFind(input.size());
+        while (connections > 0) {
+            Pair<Integer, Integer> pair = distancePair.pollFirstEntry().getValue();
+            uf.union(pair.getLeft(), pair.getRight());
+            connections--;
+        }
+        return Arrays.stream(uf.getSize())
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .limit(3)
+                .reduce((left, right) -> left * right)
+                .orElse(0);
+    }
+
+    public long partTwoDisjoinSetUnion(List<String> input) {
+        NavigableMap<Long, Pair<Integer, Integer>> distancePair = calculateDistancePairs(input);
+
+        UnionFind uf = new UnionFind(input.size());
+        Pair<Integer, Integer> pair;
+        do {
+            pair = distancePair.pollFirstEntry().getValue();
+            uf.union(pair.getLeft(), pair.getRight());
+        } while (uf.getGroups() > 1);
         return Long.parseLong(input.get(pair.getLeft()).split(",")[0]) * Long.parseLong(input.get(pair.getRight()).split(",")[0]);
     }
 

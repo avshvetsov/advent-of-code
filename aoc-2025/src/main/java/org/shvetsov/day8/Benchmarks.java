@@ -25,4 +25,14 @@ public class Benchmarks {
     public void day8PartTwoAnton(Blackhole bh) {
         bh.consume(new Day8().partTwo(Utils.parseInputByNewLine(DAY_8_PART_2_REAL_ANTON.getInput(PATH))));
     }
+
+    @Benchmark
+    public void day8PartOneDisjoinSetUnionAnton(Blackhole bh) {
+        bh.consume(new Day8().partOneDisjoinSetUnion(Utils.parseInputByNewLine(DAY_8_PART_1_REAL_ANTON.getInput(PATH)), (int) DAY_8_PART_1_REAL_ANTON.getAdditionalInput()[0]));
+    }
+
+    @Benchmark
+    public void day8PartTwoDisjoinSetUnionAnton(Blackhole bh) {
+        bh.consume(new Day8().partTwoDisjoinSetUnion(Utils.parseInputByNewLine(DAY_8_PART_2_REAL_ANTON.getInput(PATH))));
+    }
 }

@@ -72,9 +72,11 @@ Benchmarks.day7PartTwoAnton  avgt    3  0,778 ± 0,596  ms/op
 ```
 ### Day 8
 ```
-Benchmark                    Mode  Cnt    Score      Error  Units
-Benchmarks.day8PartOneAnton  avgt    3  988,983 ± 2380,624  ms/op
-Benchmarks.day8PartTwoAnton  avgt    3  891,423 ± 5473,790  ms/op
+Benchmark                                   Mode  Cnt    Score      Error  Units
+Benchmarks.day8PartOneAnton                 avgt    3  835,567 ± 1612,611  ms/op
+Benchmarks.day8PartOneDisjoinSetUnionAnton  avgt    3  836,637 ±   13,374  ms/op
+Benchmarks.day8PartTwoAnton                 avgt    3  898,703 ±  486,349  ms/op
+Benchmarks.day8PartTwoDisjoinSetUnionAnton  avgt    3  878,678 ±  459,681  ms/op
 ```
 ### Day 9
 ```

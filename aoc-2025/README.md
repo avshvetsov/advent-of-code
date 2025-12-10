@@ -19,7 +19,7 @@
 | 6   | [Trash Compactor](https://adventofcode.com/2025/day/6)     | 1h 30m | 3/10       | 3/10      | -                     |
 | 7   | [Laboratories](https://adventofcode.com/2025/day/7)        | 45m    | 3/10       | 4/10      | DFS, Cache            |
 | 8   | [Playground](https://adventofcode.com/2025/day/8)          | 3h     | 5/10       | 6/10      |                       |
-| 9   | [Day 9](https://adventofcode.com/2025/day/9)               |        |            |           |                       |
+| 9   | [Movie Theater](https://adventofcode.com/2025/day/9)       |        |            |           |                       |
 | 10  | [Day 10](https://adventofcode.com/2025/day/10)             |        |            |           |                       |
 | 11  | [Day 11](https://adventofcode.com/2025/day/11)             |        |            |           |                       |
 | 12  | [Day 12](https://adventofcode.com/2025/day/12)             |        |            |           |                       |

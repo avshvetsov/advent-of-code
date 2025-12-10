@@ -54,9 +54,9 @@ public enum InputAnswer {
     DAY_8_PART_2_REAL_ANTON("8", 2, "Anton", InputType.REAL, 133296744L),
 
     // Day 9
-    DAY_9_PART_1_EXAMPLE("9", 1, null, InputType.EXAMPLE, -1L),
-    DAY_9_PART_2_EXAMPLE("9", 2, null, InputType.EXAMPLE, -1L),
-    DAY_9_PART_1_REAL_ANTON("9", 1, "Anton", InputType.REAL, -1L),
+    DAY_9_PART_1_EXAMPLE("9", 1, null, InputType.EXAMPLE, 50L),
+    DAY_9_PART_2_EXAMPLE("9", 2, null, InputType.EXAMPLE, 24L),
+    DAY_9_PART_1_REAL_ANTON("9", 1, "Anton", InputType.REAL, 4738108384L),
     DAY_9_PART_2_REAL_ANTON("9", 2, "Anton", InputType.REAL, -1L),
 
     // Day 10

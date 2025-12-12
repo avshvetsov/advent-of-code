@@ -61,99 +61,21 @@ public enum InputAnswer {
 
     // Day 10
     DAY_10_PART_1_EXAMPLE("10", 1, null, InputType.EXAMPLE, 7L),
-    DAY_10_PART_2_EXAMPLE("10", 2, null, InputType.EXAMPLE, -1L),
+    DAY_10_PART_2_EXAMPLE("10", 2, null, InputType.EXAMPLE, 33L),
     DAY_10_PART_1_REAL_ANTON("10", 1, "Anton", InputType.REAL, 522L),
     DAY_10_PART_2_REAL_ANTON("10", 2, "Anton", InputType.REAL, -1L),
 
     // Day 11
-    DAY_11_PART_1_EXAMPLE("11", 1, null, InputType.EXAMPLE, -1L),
-    DAY_11_PART_2_EXAMPLE("11", 2, null, InputType.EXAMPLE, -1L),
-    DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, -1L),
-    DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, -1L),
+    DAY_11_PART_1_EXAMPLE("11", "1", 1, null, InputType.EXAMPLE, 5L),
+    DAY_11_PART_2_EXAMPLE("11", "2", 2, null, InputType.EXAMPLE, 2L),
+    DAY_11_PART_1_REAL_ANTON("11", 1, "Anton", InputType.REAL, 652L),
+    DAY_11_PART_2_REAL_ANTON("11", 2, "Anton", InputType.REAL, 362956369749210L),
 
     // Day 12
     DAY_12_PART_1_EXAMPLE("12", 1, null, InputType.EXAMPLE, -1L),
     DAY_12_PART_2_EXAMPLE("12", 2, null, InputType.EXAMPLE, -1L),
     DAY_12_PART_1_REAL_ANTON("12", 1, "Anton", InputType.REAL, -1L),
     DAY_12_PART_2_REAL_ANTON("12", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 13
-    DAY_13_PART_1_EXAMPLE("13", 1, null, InputType.EXAMPLE, -1L),
-    DAY_13_PART_2_EXAMPLE("13", 2, null, InputType.EXAMPLE, -1L),
-    DAY_13_PART_1_REAL_ANTON("13", 1, "Anton", InputType.REAL, -1L),
-    DAY_13_PART_2_REAL_ANTON("13", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 14
-    DAY_14_PART_1_EXAMPLE("14", 1, null, InputType.EXAMPLE, -1L),
-    DAY_14_PART_2_EXAMPLE("14", 2, null, InputType.EXAMPLE, -1L),
-    DAY_14_PART_1_REAL_ANTON("14", 1, "Anton", InputType.REAL, -1L),
-    DAY_14_PART_2_REAL_ANTON("14", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 15
-    DAY_15_PART_1_EXAMPLE("15", 1, null, InputType.EXAMPLE, -1L),
-    DAY_15_PART_2_EXAMPLE("15", 2, null, InputType.EXAMPLE, -1L),
-    DAY_15_PART_1_REAL_ANTON("15", 1, "Anton", InputType.REAL, -1L),
-    DAY_15_PART_2_REAL_ANTON("15", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 16
-    DAY_16_PART_1_EXAMPLE("16", 1, null, InputType.EXAMPLE, -1L),
-    DAY_16_PART_2_EXAMPLE("16", 2, null, InputType.EXAMPLE, -1L),
-    DAY_16_PART_1_REAL_ANTON("16", 1, "Anton", InputType.REAL, -1L),
-    DAY_16_PART_2_REAL_ANTON("16", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 17
-    DAY_17_PART_1_EXAMPLE("17", 1, null, InputType.EXAMPLE, -1L),
-    DAY_17_PART_2_EXAMPLE("17", 2, null, InputType.EXAMPLE, -1L),
-    DAY_17_PART_1_REAL_ANTON("17", 1, "Anton", InputType.REAL, -1L),
-    DAY_17_PART_2_REAL_ANTON("17", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 18
-    DAY_18_PART_1_EXAMPLE("18", 1, null, InputType.EXAMPLE, -1L),
-    DAY_18_PART_2_EXAMPLE("18", 2, null, InputType.EXAMPLE, -1L),
-    DAY_18_PART_1_REAL_ANTON("18", 1, "Anton", InputType.REAL, -1L),
-    DAY_18_PART_2_REAL_ANTON("18", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 19
-    DAY_19_PART_1_EXAMPLE("19", 1, null, InputType.EXAMPLE, -1L),
-    DAY_19_PART_2_EXAMPLE("19", 2, null, InputType.EXAMPLE, -1L),
-    DAY_19_PART_1_REAL_ANTON("19", 1, "Anton", InputType.REAL, -1L),
-    DAY_19_PART_2_REAL_ANTON("19", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 20
-    DAY_20_PART_1_EXAMPLE("20", 1, null, InputType.EXAMPLE, -1L),
-    DAY_20_PART_2_EXAMPLE("20", 2, null, InputType.EXAMPLE, -1L),
-    DAY_20_PART_1_REAL_ANTON("20", 1, "Anton", InputType.REAL, -1L),
-    DAY_20_PART_2_REAL_ANTON("20", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 21
-    DAY_21_PART_1_EXAMPLE("21", 1, null, InputType.EXAMPLE, -1L),
-    DAY_21_PART_2_EXAMPLE("21", 2, null, InputType.EXAMPLE, -1L),
-    DAY_21_PART_1_REAL_ANTON("21", 1, "Anton", InputType.REAL, -1L),
-    DAY_21_PART_2_REAL_ANTON("21", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 22
-    DAY_22_PART_1_EXAMPLE("22", 1, null, InputType.EXAMPLE, -1L),
-    DAY_22_PART_2_EXAMPLE("22", 2, null, InputType.EXAMPLE, -1L),
-    DAY_22_PART_1_REAL_ANTON("22", 1, "Anton", InputType.REAL, -1L),
-    DAY_22_PART_2_REAL_ANTON("22", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 23
-    DAY_23_PART_1_EXAMPLE("23", 1, null, InputType.EXAMPLE, -1L),
-    DAY_23_PART_2_EXAMPLE("23", 2, null, InputType.EXAMPLE, -1L),
-    DAY_23_PART_1_REAL_ANTON("23", 1, "Anton", InputType.REAL, -1L),
-    DAY_23_PART_2_REAL_ANTON("23", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 24
-    DAY_24_PART_1_EXAMPLE("24", 1, null, InputType.EXAMPLE, -1L),
-    DAY_24_PART_2_EXAMPLE("24", 2, null, InputType.EXAMPLE, -1L),
-    DAY_24_PART_1_REAL_ANTON("24", 1, "Anton", InputType.REAL, -1L),
-    DAY_24_PART_2_REAL_ANTON("24", 2, "Anton", InputType.REAL, -1L),
-
-    // Day 25
-    DAY_25_PART_1_EXAMPLE("25", 1, null, InputType.EXAMPLE, -1L),
-    DAY_25_PART_2_EXAMPLE("25", 2, null, InputType.EXAMPLE, -1L),
-    DAY_25_PART_1_REAL_ANTON("25", 1, "Anton", InputType.REAL, -1L),
-    DAY_25_PART_2_REAL_ANTON("25", 2, "Anton", InputType.REAL, -1L),
     ;
 
     private static final String RESOURCES = "src/main/resources/";

@@ -9,20 +9,20 @@
 
 ### Most annoying
 
-| Day | Name                                                       | Time   | Complexity | Enjoyment | Algorithms            |
-|-----|------------------------------------------------------------|--------|------------|-----------|-----------------------|
-| 1   | [Secret Entrance](https://adventofcode.com/2025/day/1)     | 1h 30m | 2/10       | 1/10      | -                     |
-| 2   | [Gift Shop](https://adventofcode.com/2025/day/2)           | 2h 30m | 2/10       | 3/10      | Divisor search, Regex |
-| 3   | [Lobby](https://adventofcode.com/2025/day/3)               | 1h     | 2/10       | 3/10      | Recursion             |
-| 4   | [Printing Department](https://adventofcode.com/2025/day/4) | 1h     | 2/10       | 2/10      | Queue                 |
-| 5   | [Cafeteria](https://adventofcode.com/2025/day/5)           | 1h     | 3/10       | 3/10      | RangeSet              |
-| 6   | [Trash Compactor](https://adventofcode.com/2025/day/6)     | 1h 30m | 3/10       | 3/10      | -                     |
-| 7   | [Laboratories](https://adventofcode.com/2025/day/7)        | 45m    | 3/10       | 4/10      | DFS, Cache            |
-| 8   | [Playground](https://adventofcode.com/2025/day/8)          | 3h     | 5/10       | 6/10      |                       |
-| 9   | [Movie Theater](https://adventofcode.com/2025/day/9)       |        |            |           |                       |
-| 10  | [Day 10](https://adventofcode.com/2025/day/10)             |        |            |           |                       |
-| 11  | [Day 11](https://adventofcode.com/2025/day/11)             |        |            |           |                       |
-| 12  | [Day 12](https://adventofcode.com/2025/day/12)             |        |            |           |                       |
+| Day | Name                                                         | Time   | Complexity | Enjoyment | Algorithms            |
+|-----|--------------------------------------------------------------|--------|------------|-----------|-----------------------|
+| 1   | [Secret Entrance](https://adventofcode.com/2025/day/1)       | 1h 30m | 2/10       | 1/10      | -                     |
+| 2   | [Gift Shop](https://adventofcode.com/2025/day/2)             | 2h 30m | 2/10       | 3/10      | Divisor search, Regex |
+| 3   | [Lobby](https://adventofcode.com/2025/day/3)                 | 1h     | 2/10       | 3/10      | Recursion             |
+| 4   | [Printing Department](https://adventofcode.com/2025/day/4)   | 1h     | 2/10       | 2/10      | Queue                 |
+| 5   | [Cafeteria](https://adventofcode.com/2025/day/5)             | 1h     | 3/10       | 3/10      | RangeSet              |
+| 6   | [Trash Compactor](https://adventofcode.com/2025/day/6)       | 1h 30m | 3/10       | 3/10      | -                     |
+| 7   | [Laboratories](https://adventofcode.com/2025/day/7)          | 45m    | 3/10       | 4/10      | DFS, Cache            |
+| 8   | [Playground](https://adventofcode.com/2025/day/8)            | 3h     | 5/10       | 6/10      |                       |
+| 9   | [Movie Theater](https://adventofcode.com/2025/day/9)         |        |            |           |                       |
+| 10  | [Factory](https://adventofcode.com/2025/day/10)              |        |            |           |                       |
+| 11  | [Reactor](https://adventofcode.com/2025/day/11)              | 30m    | 3/10       | 5/10      | Cache                 |
+| 12  | [Christmas Tree Farm](https://adventofcode.com/2025/day/12)  |        |            |           |                       |
 
 ### Day 1
 ```
@@ -88,7 +88,9 @@ Benchmarks.day8PartTwoDisjoinSetUnionAnton  avgt    3  878,678 ±  459,681  ms/o
 ```
 ### Day 11
 ```
-
+Benchmark                     Mode  Cnt  Score   Error  Units
+Benchmarks.day11PartOneAnton  avgt    3  0,545 ± 0,877  ms/op
+Benchmarks.day11PartTwoAnton  avgt    3  0,890 ± 1,867  ms/op
 ```
 ### Day 12
 ```
